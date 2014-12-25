@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>の</title>
+  <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+    *           { margin: 0; padding: 0; }
+    html, body  { color: black; }
+
+    body {
+        padding: 0px 25px; 
+        margin: -1px auto;
+        font: 14px helvetica, "Segoe UI", arial, freesans, sans-serif; 
+        line-height: 1.8em;
+        color: #3A3A3A;
+        background-color: #f2f2f2;
+    }
+
+    p { margin: 1em 0; }
+
+    a {text-decoration: none; border-bottom: 1px dotted; color: #4183c4; }
+    a:hover, a:active { color: #75A837; }
+
+    blockquote {
+        margin: 14px 0; padding: 0.7em 11px;
+        color: #555;
+        font-style: italic;
+        border-left: 10px solid #838383;
+    }
+
+    img {
+        display:          block;
+        background-color: #F3F3F2;
+        border:           1px solid #D9D9D7;
+        margin:           0px auto;   padding: 5px;
+    }
+
+    ins { color:#008000; }
+    del { color:#ACACAC; }
+
+    hr { border: 0; height: 1px; background: #333; }
+
+    sup, sub, a.footnote-ref {
+        height:         0;
+        line-height:    1;
+        vertical-align: super;
+        position:       relative;
+    }
+
+    sub             {vertical-align: sub; top: -1px; }
+    a.footnote-ref { font-size: 1em; }
+
+    abbr { border-bottom: 1px dotted }
+
+    h1,h2,h3,h4,h5,h6 { margin: 1.5em 0px 1em; padding: 4px 0; border-bottom: 1px solid #e0e0e0; }
+    h1 { font-size: 2em;}
+    h2 { font-size: 1.571em; }
+    h3 { font-size: 1.429em; }
+    h4 { font-size: 1.286em; }
+    h5 { font-size: 1.143em; color: #4d4d4d;}
+    h6 { font-size: 1em; color: #666; }
+    h1.title { margin:0 }
+
+    ul, ol  { margin: 21px 0 0px 30px; list-style-position: outside; }
+    li      { margin: 7px 0 }
+    ul      { list-style-type: disc; }
+    ol      { list-style-type: decimal-leading-zero; }
+
+    dl, dt, dd { margin: 0; }
+    dl { padding: 0px 1em 10px; }
+    dt { padding: 5px 0 5px; font-weight: bold; line-height: normal; }
+    dd { padding: 0 10px 20px 3em; font-style: italic; }
+
+    /* based on http://icant.co.uk/csstablegallery/tables/50.php (Blaugrana). */
+    table { 
+        padding: 0; margin: 0 auto 2em auto;
+        border-spacing: 0; border-collapse: collapse;
+        min-width: 50%;
+        border: 1px solid;
+    }
+    th, caption {color: #444; font-weight: bold;text-align: center;}
+    td, th {padding: .6em .4em; vertical-align: top; border: 1px solid #779; }
+    th, tfoot td {border: 1px solid #361; background: #e0e5cf; }
+    /*tr { background:#f5f5f5 }*/
+    tr { background: #cfe0e5 }
+    tr.odd { background: #e5cfe0 }
+    tr.odd td, tr.odd th { border-color: #977; }
+
+    pre, code {
+        border:         1px solid #ccc;
+        font-size:      12px;
+        font-family:    Consolas, "Liberation Mono", Courier, monospace;
+        background-color:#eee;
+    }
+
+    pre  { margin: 5px 0 0; padding: 6px 5px; white-space: pre; overflow: auto; }
+    code { margin: 0 2px; padding: 2px 5px; /*white-space: nowrap;*/ }
+
+    pre code {border: none }
+
+    #TOC    { margin-top: 30px; background-color: #e5efdf; border: 1px solid #cedec4;}
+    #TOC a  { margin: 0 15px !important; }
+    #TOC ul {
+        margin: 1px 0 0 15px !important;    
+        padding: 0 0 0 1px !important;
+        display: block;
+        line-height: 20px;
+        list-style: none;
+    }
+    #TOC ul li  { border-left: 1px solid; position: relative; margin:0 !important; }
+    #TOC ul > #TOC li { padding-bottom: 10px !important;}
+    #TOC ul li:before {
+        content: '';
+        width: 14px;
+        position: absolute;
+        border-bottom: 1px solid;
+        left: 0px;
+        top: 10px;
+    }
+    #TOC ul li:last-child {border-left:none;}
+    #TOC ul li:last-child:before {border-left:1px solid; height: 10px; margin-top:-10px !important; }
+    #TOC ul li, #TOC ul li:before, #TOC ul li:last-child:before {border-color: #7A7A7A; }
+    .admonition p   { margin: 0.5em 1em 0.5em 1em; padding: 0;}
+    .admonition pre { margin: 0.4em 1em 0.4em 1em;}
+    .admonition ul, .admonition ol { margin: 0.1em 0.5em 0.5em 3em;   padding: 0;}
+
+    .admonition {
+        margin: 2em; padding: 0;
+        font-size:        0.9em;
+        border:           1px solid #c2c2c2;
+        background-color: #e9e9e9;
+    }
+
+    .admonition p.admonition-title {
+        margin:     0;
+        padding:    0.1em 0 0.1em 0.5em;
+        font-size:  1.1em;
+        font-weight: bold;
+        color:      #fff;
+        border-bottom: 1px solid #c2c2c2;
+        background-color: #999; 
+    }
+
+    .admonition.error, .admonition.caution, .admonition.danger
+    {border-color: #900000; background-color: #ffe9e9;}
+
+    .error p.admonition-title, .caution p.admonition-title, .danger p.admonition-title
+    {background-color: #b04040; border-color: #900000;}
+
+    .admonition.hint
+    {background-color: #ECFAE3;  border-color: #609060;}
+
+    .hint p.admonition-title
+    {background-color: #70A070; border-color: #609060;}
+
+    .admonition.note, .admonition.tip, .admonition.warning
+    {border-color:#e2ba54; background-color:#fcfce1;}
+
+    .note p.admonition-title, .tip p.admonition-title, .warning p.admonition-title
+    {background-color: #f1d170; border-color:#e2ba54;}
+
+    .admonition.info, .admonition.attention, .admonition.important
+    {background-color: #e8edfc; border-color: #94A7BF;}
+
+    .info p.admonition-title, .attention p.admonition-title, .important p.admonition-title
+    {background-color: #7088A0; border-color: #94A7BF;}
+
+    mark {background-color: #e7d600; padding: 0.2em;}
+
+    .bookbar {padding: 10px; border: 1px solid #ccc; border-width: 1px 0; overflow: auto}
+    .bookbar li {display: inline-block;}
+    .bookbar ul {margin: 0}
+    .breadcrumbs {float: left;}
+    .breadcrumbs li:after {content: "\0BB \020" /* » */; padding-left: 0.6em;}
+    .breadcrumbs li:last-child:after {content: ""}
+    .booknav {float:right;}
+    .booknav li {padding: 0 1.0em;}
+
+    #content {display: table-row;}
+
+    #sidebar {display: table-cell; width: 240px; font-size: small; background-color: #eeeeee;}
+    #sidebar ul ul {margin: 5px 0px 0px 5px;}
+    #sidebar ul ul li {margin-left: 10px;}
+    #sidebar ul {list-style: decimal;}
+    #sidebar ul ul {list-style: lower-alpha;}
+    #sidebar ul ul ul {list-style: lower-roman;}
+    #sidebar li.active > a {font-weight: bold}
+
+    #content-body {padding: 20px; font-size: 16px;}
+
+    #footer {padding: 10px; font-size: small; }
+</style></head><body>
+	<div id="wrapper">
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">の</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="particula_ya-toka.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="particula_ka.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="content">
+
+	<div id="sidebar">
+	<ul><li><a href="basico_escritura-pronunciacion.html">Escritura y pronunciación</a></li><li><a href="basico_pronombres.html">Pronombres</a></li><li><a href="basico_numeros.html">Números</a></li><li><a href="basico_extra.html">Nociones básicas, extra</a></li><li><a href="tiempo.html">Tiempo</a></li><li><a href="colores.html">Colores</a></li><li><a href="greetings.html">Greetings</a></li><li><a href="desu.html">です</a></li><li><a href="sustantivos.html">Sustantivos</a></li><li><a href="kosoado.html">Ko-So-A-Do</a></li><li><a href="contadores.html">Contadores</a></li><li><a href="adjetivos.html">Adjetivos</a></li><li><a href="verbos.html">Verbos</a></li><li><a href="forma-simple.html">Usos de la forma simple</a></li><li><a href="aru-iru.html">ある, いる</a></li><li><a href="naru.html">なる</a></li><li><a href="adverbios.html">Adverbios</a></li><li><a href="descripcion_cosas.html">Describiendo donde estan las cosas</a></li><li><a href="expresar-cuanto.html">Expresar "¿Cuánto?"</a></li><li><a href="nanika-nanimo.html">何か, 何も</a></li><li><a href="expresar-cantidad.html">Expresión de cantidad</a></li><li><a href="duracion-actividad.html">Duración de actividad</a></li><li><a href="particulas.html">Particulas</a></li><li><a href="particula_ha.html">は</a></li><li><a href="particula_mo.html">も</a></li><li><a href="particula_ga.html">が</a></li><li><a href="particula_wo.html">を</a></li><li><a href="particula_ni.html">に</a></li><li><a href="particula_he.html">へ</a></li><li><a href="particula_de.html">で</a></li><li><a href="particula_to.html">と</a></li><li><a href="particula_ya-toka.html">や/とか</a></li><li class='active'><a href="">の</a><ul><li><a href="#final-de-oración">Final de oración</a><ul><li><a href="#pregunta">Pregunta</a></li><li><a href="#declaración-órdenes-suaves">Declaración / órdenes suaves</a></li></ul></li><li><a href="#mitad-de-oración">Mitad de oración</a><ul><li><a href="#modificador-de-sustantivo">Modificador de sustantivo</a></li><li><a href="#pronombre-indefinidoevitar-repetición">Pronombre indefinido/Evitar repetición</a></li><li><a href="#normalizador">Normalizador</a></li></ul></li><li><a href="#resumen">Resumen</a></li></ul></li><li><a href="particula_ka.html">か</a></li><li><a href="particula_ne.html">ね</a></li><li><a href="particula_yo.html">よ</a></li></ul>
+	</div>
+
+	<div id="content-body">
+
+<div id="header">
+<h1 class="title">の</h1>
+</div>
+<h2 id="final-de-oración">Final de oración</h2>
+<h3 id="pregunta">Pregunta</h3>
+<p>En el registro informal, 「の」 reemplaza a <a href="particula_ka.html">か</a> para indicar una &quot;pregunta&quot;. Cabe mencionar que 「な」 debe ser puesto entre 「の」 y <a href="adjetivos.html">adjetivos -na</a> (además de sustantivos).</p>
+<dl>
+<dt>あの人は本当に先生な<mark>の</mark>？</dt>
+<dd>¿Esa persona es realmente un profesor?<br />
+</dd>
+<dt>あしたは来る<mark>の</mark>？</dt>
+<dd>¿Vendrás mañana?<br />
+</dd>
+<dt>タイへ行く<mark>の</mark>。</dt>
+<dd>Me voy a Tailandia, ¿sabías?
+</dd>
+</dl>
+<h3 id="declaración-órdenes-suaves">Declaración / órdenes suaves</h3>
+<p>Básicamente usado por mujeres y niños.</p>
+<dl>
+<dt>私はね、パリに何度も行った<mark>の</mark></dt>
+<dd>(as for me) fui a París muchas veces<br />
+</dd>
+<dt>しんちゃん、それに触れない<mark>の</mark>！</dt>
+<dd>Shin, no toques eso!
+</dd>
+</dl>
+<h2 id="mitad-de-oración">Mitad de oración</h2>
+<h3 id="modificador-de-sustantivo">Modificador de sustantivo</h3>
+<p>Se usa の para conectar dos o mas <a href="sustantivos.html">sustantivos</a>. El sustantivo2 es el &quot;tema&quot;, &quot;idea principal&quot;. El sustantivo1 hace a la oración más específica (más restricción). Una frase de este estilo actúa como un gran sustantivo.</p>
+<p><strong>Posesivo</strong></p>
+<dl>
+<dt>私<mark>の</mark>家は広いです</dt>
+<dd>Mi casa es espaciosa<br />
+</dd>
+<dt>筒井さん<mark>の</mark>車は小さくて赤いです</dt>
+<dd>El auto de Tsutsui es rojo y chiquito<br />
+</dd>
+<dt>たけし<mark>の</mark>電話番号</dt>
+<dd>El número de teléfono de Takeshi
+</dd>
+</dl>
+<p><strong>Descriptivo</strong></p>
+<dl>
+<dt>これは鉄<mark>の</mark>パイプです</dt>
+<dd>Este es un tubo de metal<br />
+</dd>
+<dt>これは果物<mark>の</mark>店です</dt>
+<dd>Esta es la fruteria<br />
+</dd>
+<dt>日本<mark>の</mark>大学</dt>
+<dd>Una universidad en Japón<br />
+</dd>
+<dt>たけしさん<mark>の</mark>お母さんは高校<mark>の</mark>先生です</dt>
+<dd>La madre de Takeshi es una profesora de secundaria
+</dd>
+</dl>
+<p><strong>Posicional</strong></p>
+<dl>
+<dt>木<mark>の</mark>下で休みたい</dt>
+<dd>Quiero descanzar debajo de un árbol<br />
+</dd>
+<dt>明はフランス<mark>の</mark>大学で勉強している</dt>
+<dd>Akira esta estudiando en una universidad francesa
+</dd>
+</dl>
+<p><strong>De un creador</strong></p>
+<dl>
+<dt>夏目漱石<mark>の</mark>小説を読んでください</dt>
+<dd>Lean las novelas de Sôseki Natsume, por favor<br />
+</dd>
+<dt>アイヌ<mark>の</mark>文化は興味深いです</dt>
+<dd>La cultura Ainu es interesante
+</dd>
+</dl>
+<p><strong>Apositivo</strong></p>
+<p>Es una construcción que no esta explicitamente conectada con alguna palabra -usualmente se separa con comas- pero que refiere o explica algo relativo a un sustantivo. En Japonés, esta conectado con sustantivo que modifica.</p>
+<dl>
+<dt>はじめて。婦長<mark>の</mark>田辺です。</dt>
+<dd>Gusto de conocerte. Soy Tanabe, el jefe del departamento / head of the department<br />
+</dd>
+<dt>友達<mark>の</mark>広美ちゃんは結婚しました</dt>
+<dd>Hiromi, mi amigo, se casó
+</dd>
+</dl>
+<h3 id="pronombre-indefinidoevitar-repetición">Pronombre indefinido/Evitar repetición</h3>
+<p>の reemplaza un sustantivo cuando el interlocutor sabe del contexto, o la situación, que estan hablando. Cuando un sustantivo sigue a un adjetivo, y cuando es claro a que se refiere, se puede reemplazar el sustantivo con el pronombre の, &quot;uno&quot;. Se puede usar の para evitar repeticion.</p>
+<dl>
+<dt>どんなパンにする？ | 甘い<mark>の</mark>が食べたい</dt>
+<dd>¿Qué pan vas a elegir? | Quiero comer el dulce<br />
+</dd>
+<dt>私は黒いセーターを持っています。赤い<mark>の</mark>も持っています。</dt>
+<dd>Tengo un sweater negro. También tengo uno rojo.<br />
+</dd>
+<dt>安い辞書を買いに行きなした。でもいい<mark>の</mark>がありませんでした。</dt>
+<dd>Fui a comprar un diccionario barato, pero no habia ninguno bueno.
+</dd>
+</dl>
+<div class="admonition info">
+<p>[Adjetivos い / Adjetivos な] + sustantivo --&gt; [Adjetivos い / Adjetivos な] + の</p>
+</div>
+<p>「だれの」 se usa para preguntar a quién pertenece algo.</p>
+<dl>
+<dt>これは<mark>だれの</mark>かばんですか | それはスーさん<mark>の</mark>かばんです</dt>
+<dd>¿De quién es este bolso? | Es de Sue.
+</dd>
+</dl>
+<p>Similarmente, un sustantivo seguido de otro sustantivo puede ser reducido. Acá, la sencuencia de la forma &quot;sustantivo1のsustantivo2&quot; puede ser reducido a &quot;sustantivo1の&quot; omitiendo el segundo sustantivo.</p>
+<div class="admonition info">
+<p>sustantivo1のsustantivo2 --&gt; sustantivo1の</p>
+</div>
+<dl>
+<dt>これはスーさんのかばんですか。 | いいえ、それはメアリーさん<mark>の</mark>です。</dt>
+<dd>¿Ese es el bolso de Sue? | No, ese es el de Mary.<br />
+</dd>
+<dt>アメリカのアイスクリームのほうが日本<mark>の</mark>よりおいしいです。</dt>
+<dd>El helado estadounidense es mucho mas delicioso que uno japonés.
+</dd>
+</dl>
+<h3 id="normalizador">Normalizador</h3>
+<p>&quot;Normalizar&quot; una oración es convertirla en una frase nominal asi funciona como un sustantivo. Por ejemplo, &quot;andar en moto es díficil&quot;, la parte &quot;andar en moto&quot; funciona como sustantivo.</p>
+<dl>
+<dt><mark>バイクを運転するの</mark>は難しいです</dt>
+<dd>Andar en moto es difícil<br />
+</dd>
+<dt><mark>水泳をしに行くの</mark>は楽しいです</dt>
+<dd>Ir a nadar es divertido<br />
+</dd>
+<dt><mark>私は広子がどんな音楽が好きなの</mark>か知らない</dt>
+<dd>No se qué tipo de musica le gusta a Hiroko
+</dd>
+</dl>
+<h2 id="resumen">Resumen</h2>
+<table>
+ <tr> <th> 
+Poseción
+</th><td> 
+これは先生の本です <em>Este es el libro del profesor</em>
+</td> </tr>
+  <tr> <th> 
+Descripción
+</th><td> 
+これは掲載の本です <em>Este es un libro de economía</em>
+</td> </tr>
+  <tr> <th> 
+Posicional
+</th><td> 
+机の上に本があります <em>Sobre el escritorio hay un libro</em>
+</td> </tr>
+  <tr> <th> 
+Creador
+</th><td> 
+ゲーテの本を読みたい <em>Quiero leer un libro por Goethe</em>
+</td> </tr>
+  <tr> <th> 
+Aposicional
+</th><td> 
+私は先生の岡本です <em>Soy Okamoto, el profesor</em>
+</td> </tr>
+  <tr> <th> 
+Pronombre indefinido
+</th><td> 
+これは私のです <em>Este es mío</em>
+</td> </tr>
+  <tr> <th> 
+Normalizador
+</th><td> 
+本を書くには難しいです <em>Escribir un libro es difícil</em>
+</td> </tr>
+  <tr> <th> 
+Pregunta (informal)
+</th><td> 
+本を書くには難しうの？ <em>¿Es difícil escribir un libro?</em>
+</td> </tr>
+  <tr> <th> 
+Declaracion suave
+</th><td> 
+ゲーテの本を読みたいの <em>Me gustaría leer un libro por Goethe</em>
+</td> </tr>
+  <tr> <th> 
+Explicación
+</th><td> 
+本を書いているのです <em>Estoy escribiendo un libro</em>
+</td> </tr>
+</table>
+
+
+
+
+<div class="references">
+
+</div>
+
+	</div> <!-- contentbody -->
+	</div> <!-- content -->
+
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">の</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="particula_ya-toka.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="particula_ka.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+	</div> <!-- wrapper -->
+</body>
+</html>

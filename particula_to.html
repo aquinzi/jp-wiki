@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>と</title>
+  <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+    *           { margin: 0; padding: 0; }
+    html, body  { color: black; }
+
+    body {
+        padding: 0px 25px; 
+        margin: -1px auto;
+        font: 14px helvetica, "Segoe UI", arial, freesans, sans-serif; 
+        line-height: 1.8em;
+        color: #3A3A3A;
+        background-color: #f2f2f2;
+    }
+
+    p { margin: 1em 0; }
+
+    a {text-decoration: none; border-bottom: 1px dotted; color: #4183c4; }
+    a:hover, a:active { color: #75A837; }
+
+    blockquote {
+        margin: 14px 0; padding: 0.7em 11px;
+        color: #555;
+        font-style: italic;
+        border-left: 10px solid #838383;
+    }
+
+    img {
+        display:          block;
+        background-color: #F3F3F2;
+        border:           1px solid #D9D9D7;
+        margin:           0px auto;   padding: 5px;
+    }
+
+    ins { color:#008000; }
+    del { color:#ACACAC; }
+
+    hr { border: 0; height: 1px; background: #333; }
+
+    sup, sub, a.footnote-ref {
+        height:         0;
+        line-height:    1;
+        vertical-align: super;
+        position:       relative;
+    }
+
+    sub             {vertical-align: sub; top: -1px; }
+    a.footnote-ref { font-size: 1em; }
+
+    abbr { border-bottom: 1px dotted }
+
+    h1,h2,h3,h4,h5,h6 { margin: 1.5em 0px 1em; padding: 4px 0; border-bottom: 1px solid #e0e0e0; }
+    h1 { font-size: 2em;}
+    h2 { font-size: 1.571em; }
+    h3 { font-size: 1.429em; }
+    h4 { font-size: 1.286em; }
+    h5 { font-size: 1.143em; color: #4d4d4d;}
+    h6 { font-size: 1em; color: #666; }
+    h1.title { margin:0 }
+
+    ul, ol  { margin: 21px 0 0px 30px; list-style-position: outside; }
+    li      { margin: 7px 0 }
+    ul      { list-style-type: disc; }
+    ol      { list-style-type: decimal-leading-zero; }
+
+    dl, dt, dd { margin: 0; }
+    dl { padding: 0px 1em 10px; }
+    dt { padding: 5px 0 5px; font-weight: bold; line-height: normal; }
+    dd { padding: 0 10px 20px 3em; font-style: italic; }
+
+    /* based on http://icant.co.uk/csstablegallery/tables/50.php (Blaugrana). */
+    table { 
+        padding: 0; margin: 0 auto 2em auto;
+        border-spacing: 0; border-collapse: collapse;
+        min-width: 50%;
+        border: 1px solid;
+    }
+    th, caption {color: #444; font-weight: bold;text-align: center;}
+    td, th {padding: .6em .4em; vertical-align: top; border: 1px solid #779; }
+    th, tfoot td {border: 1px solid #361; background: #e0e5cf; }
+    /*tr { background:#f5f5f5 }*/
+    tr { background: #cfe0e5 }
+    tr.odd { background: #e5cfe0 }
+    tr.odd td, tr.odd th { border-color: #977; }
+
+    pre, code {
+        border:         1px solid #ccc;
+        font-size:      12px;
+        font-family:    Consolas, "Liberation Mono", Courier, monospace;
+        background-color:#eee;
+    }
+
+    pre  { margin: 5px 0 0; padding: 6px 5px; white-space: pre; overflow: auto; }
+    code { margin: 0 2px; padding: 2px 5px; /*white-space: nowrap;*/ }
+
+    pre code {border: none }
+
+    #TOC    { margin-top: 30px; background-color: #e5efdf; border: 1px solid #cedec4;}
+    #TOC a  { margin: 0 15px !important; }
+    #TOC ul {
+        margin: 1px 0 0 15px !important;    
+        padding: 0 0 0 1px !important;
+        display: block;
+        line-height: 20px;
+        list-style: none;
+    }
+    #TOC ul li  { border-left: 1px solid; position: relative; margin:0 !important; }
+    #TOC ul > #TOC li { padding-bottom: 10px !important;}
+    #TOC ul li:before {
+        content: '';
+        width: 14px;
+        position: absolute;
+        border-bottom: 1px solid;
+        left: 0px;
+        top: 10px;
+    }
+    #TOC ul li:last-child {border-left:none;}
+    #TOC ul li:last-child:before {border-left:1px solid; height: 10px; margin-top:-10px !important; }
+    #TOC ul li, #TOC ul li:before, #TOC ul li:last-child:before {border-color: #7A7A7A; }
+    .admonition p   { margin: 0.5em 1em 0.5em 1em; padding: 0;}
+    .admonition pre { margin: 0.4em 1em 0.4em 1em;}
+    .admonition ul, .admonition ol { margin: 0.1em 0.5em 0.5em 3em;   padding: 0;}
+
+    .admonition {
+        margin: 2em; padding: 0;
+        font-size:        0.9em;
+        border:           1px solid #c2c2c2;
+        background-color: #e9e9e9;
+    }
+
+    .admonition p.admonition-title {
+        margin:     0;
+        padding:    0.1em 0 0.1em 0.5em;
+        font-size:  1.1em;
+        font-weight: bold;
+        color:      #fff;
+        border-bottom: 1px solid #c2c2c2;
+        background-color: #999; 
+    }
+
+    .admonition.error, .admonition.caution, .admonition.danger
+    {border-color: #900000; background-color: #ffe9e9;}
+
+    .error p.admonition-title, .caution p.admonition-title, .danger p.admonition-title
+    {background-color: #b04040; border-color: #900000;}
+
+    .admonition.hint
+    {background-color: #ECFAE3;  border-color: #609060;}
+
+    .hint p.admonition-title
+    {background-color: #70A070; border-color: #609060;}
+
+    .admonition.note, .admonition.tip, .admonition.warning
+    {border-color:#e2ba54; background-color:#fcfce1;}
+
+    .note p.admonition-title, .tip p.admonition-title, .warning p.admonition-title
+    {background-color: #f1d170; border-color:#e2ba54;}
+
+    .admonition.info, .admonition.attention, .admonition.important
+    {background-color: #e8edfc; border-color: #94A7BF;}
+
+    .info p.admonition-title, .attention p.admonition-title, .important p.admonition-title
+    {background-color: #7088A0; border-color: #94A7BF;}
+
+    mark {background-color: #e7d600; padding: 0.2em;}
+
+    .bookbar {padding: 10px; border: 1px solid #ccc; border-width: 1px 0; overflow: auto}
+    .bookbar li {display: inline-block;}
+    .bookbar ul {margin: 0}
+    .breadcrumbs {float: left;}
+    .breadcrumbs li:after {content: "\0BB \020" /* » */; padding-left: 0.6em;}
+    .breadcrumbs li:last-child:after {content: ""}
+    .booknav {float:right;}
+    .booknav li {padding: 0 1.0em;}
+
+    #content {display: table-row;}
+
+    #sidebar {display: table-cell; width: 240px; font-size: small; background-color: #eeeeee;}
+    #sidebar ul ul {margin: 5px 0px 0px 5px;}
+    #sidebar ul ul li {margin-left: 10px;}
+    #sidebar ul {list-style: decimal;}
+    #sidebar ul ul {list-style: lower-alpha;}
+    #sidebar ul ul ul {list-style: lower-roman;}
+    #sidebar li.active > a {font-weight: bold}
+
+    #content-body {padding: 20px; font-size: 16px;}
+
+    #footer {padding: 10px; font-size: small; }
+</style></head><body>
+	<div id="wrapper">
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">と</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="particula_de.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="particula_ya-toka.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="content">
+
+	<div id="sidebar">
+	<ul><li><a href="basico_escritura-pronunciacion.html">Escritura y pronunciación</a></li><li><a href="basico_pronombres.html">Pronombres</a></li><li><a href="basico_numeros.html">Números</a></li><li><a href="basico_extra.html">Nociones básicas, extra</a></li><li><a href="tiempo.html">Tiempo</a></li><li><a href="colores.html">Colores</a></li><li><a href="greetings.html">Greetings</a></li><li><a href="desu.html">です</a></li><li><a href="sustantivos.html">Sustantivos</a></li><li><a href="kosoado.html">Ko-So-A-Do</a></li><li><a href="contadores.html">Contadores</a></li><li><a href="adjetivos.html">Adjetivos</a></li><li><a href="verbos.html">Verbos</a></li><li><a href="forma-simple.html">Usos de la forma simple</a></li><li><a href="aru-iru.html">ある, いる</a></li><li><a href="naru.html">なる</a></li><li><a href="adverbios.html">Adverbios</a></li><li><a href="descripcion_cosas.html">Describiendo donde estan las cosas</a></li><li><a href="expresar-cuanto.html">Expresar "¿Cuánto?"</a></li><li><a href="nanika-nanimo.html">何か, 何も</a></li><li><a href="expresar-cantidad.html">Expresión de cantidad</a></li><li><a href="duracion-actividad.html">Duración de actividad</a></li><li><a href="particulas.html">Particulas</a></li><li><a href="particula_ha.html">は</a></li><li><a href="particula_mo.html">も</a></li><li><a href="particula_ga.html">が</a></li><li><a href="particula_wo.html">を</a></li><li><a href="particula_ni.html">に</a></li><li><a href="particula_he.html">へ</a></li><li><a href="particula_de.html">で</a></li><li class='active'><a href="">と</a><ul><li><a href="#conectar-sustantivoslistar-cosas">Conectar sustantivos/Listar cosas</a></li><li><a href="#junto-con">Junto con</a></li><li><a href="#citar">Citar</a></li><li><a href="#definición">Definición</a></li><li><a href="#con-gitaigogiongo">Con gitaigo/giongo</a></li><li><a href="#condicional">Condicional</a></li><li><a href="#resumen">Resumen</a></li></ul></li><li><a href="particula_ya-toka.html">や/とか</a></li><li><a href="particula_no.html">の</a></li><li><a href="particula_ka.html">か</a></li><li><a href="particula_ne.html">ね</a></li><li><a href="particula_yo.html">よ</a></li></ul>
+	</div>
+
+	<div id="content-body">
+
+<div id="header">
+<h1 class="title">と</h1>
+</div>
+<p>Muchos usos.</p>
+<h2 id="conectar-sustantivoslistar-cosas">Conectar sustantivos/Listar cosas</h2>
+<p>Conecta solo dos sustantivos, funciona como &quot;y&quot; para realizar listas exhaustivas (se nombra todos los elementos).</p>
+<dl>
+<dt>京都<mark>と</mark>大阪に行きました</dt>
+<dd>Fui a Kyoto y Osaka<br />
+</dd>
+<dt>花子<mark>と</mark>太郎は結婚する。</dt>
+<dd>Hanako y Tarô se casan<br />
+</dd>
+<dt>彼は英語<mark>と</mark>中国語<mark>と</mark>チェコ語が出来る</dt>
+<dd>Él puede hablar inglés, chino y checo.
+</dd>
+</dl>
+<h2 id="junto-con">Junto con</h2>
+<p>Con quien se hace algo; indica compañía.</p>
+<dl>
+<dt>メアリーさんはスーさん<mark>と</mark>韓国に行きます</dt>
+<dd>Mary va a ir a Corea con Sue<br />
+</dd>
+<dt>原さんは大塚さん<mark>と</mark>囲碁を打っている</dt>
+<dd>Hara juega GO con Ootsuka<br />
+</dd>
+<dt>彼女はジョン<mark>と（一緒に）</mark> 観光をした</dt>
+<dd>Ella fue a hacer turismo (junto) con John.
+</dd>
+</dl>
+<p>La combinación （と）一緒に es una frase frecuente y significa &quot;junto con&quot;. Sin embargo, 一緒に se omite de la oración porque se asume que se entiende.</p>
+<dl>
+<dt>秋成くんはホステス<mark>と</mark>話している</dt>
+<dd>Akinari esta hablando con la anfitriona<br />
+</dd>
+<dt>りんごはなし<mark>と</mark>違います</dt>
+<dd>Manzanas y peras son diferentes
+</dd>
+</dl>
+<h2 id="citar">Citar</h2>
+<p>Hay dos tipos de citas: las indirectas -oración subordinada para indicar lo que se dijo- y directas. Se cita explicitamente lo que se dijo entre comillas.</p>
+<dl>
+<dt>博信は君がバカ<mark>と</mark>言ったよ</dt>
+<dd>Hironobu dijo que eras tonto<br />
+</dd>
+<dt>サンドラは「休暇が欲しいなぁ」<mark>と</mark>叫んだ</dt>
+<dd>Sandra gritó: &quot;¡Quiero vacaciones!&quot;<br />
+</dd>
+<dt>「愛している」<mark>と</mark>言う。</dt>
+<dd>Dice: &quot;Te quiero&quot;.
+</dd>
+</dl>
+<p>Estas oraciones usan verbos como 言う、叫ぶ、ささや, etc. De manera similar, los verbos 思う、考える、書く, y similares usan と.</p>
+<dl>
+<dt>大阪は本当に楽しい<mark>と</mark>思っているよ</dt>
+<dd>Pienso que Osaka es verdaderamente divertido<br />
+</dd>
+<dt>「さくら」は漢字で｢桜｣<mark>と</mark>書く</dt>
+<dd>La palabra &quot;sakura&quot; se escribe &quot;桜&quot; en kanij.
+</dd>
+</dl>
+<div class="admonition note">
+<p>Ver como antes de と, si se tiene un <a href="adjetivos.html">adjetivo -na</a> o un <a href="sustantivos.html">sustantivo</a>, se necesita que el verbo esté en su <a href="verbos.html">manera &quot;simple&quot; (だ)</a>, mientras que los adjetivos -i no requieren conjugación.</p>
+</div>
+<h2 id="definición">Definición</h2>
+<p>Usando la combinación とは, o su forma completa というのは, se puede expresar a equivalencia de &quot;definición&quot; en una oración.</p>
+<dl>
+<dt>｢脳験｣<mark>とは</mark>｢能力試験｣の略です</dt>
+<dd>&quot;Nouken&quot; es la abreviatura para &quot;Nouryoku shiken&quot;<br />
+</dd>
+<dt>｢民主主義｣<mark>というのは</mark>何ですか?</dt>
+<dd>¿Qué es (eso que nosotros llamamos) &quot;democracia&quot;?
+</dd>
+</dl>
+<p>La expresión という es de mucha ayuda al clarificar un concepto o dando mas información sobre algo.</p>
+<dl>
+<dt>｢Ｍｏｎｓｔｅｒ｣<mark>という</mark>マンガは超面白～い！</dt>
+<dd>El manga &quot;Monster&quot; is muuuy bueno!<br />
+</dd>
+<dt>｢アゲハ｣<mark>という</mark>女を知ってる？</dt>
+<dd>¿Conoces a una mujer llamada &quot;Ageha&quot;?
+</dd>
+</dl>
+<h2 id="con-gitaigogiongo">Con gitaigo/giongo</h2>
+<dl>
+<dt>彼女はしくしく<mark>と</mark>泣いている</dt>
+<dd>Esta sollozando silenciosamente<br />
+</dd>
+<dt>飛行機がびゅ～ん<mark>と</mark>飛んでいた</dt>
+<dd>El avión voló
+</dd>
+</dl>
+<h2 id="condicional">Condicional</h2>
+<dl>
+<dt>にんじんを食べる<mark>と</mark>目がよくなります</dt>
+<dd>Si comes zanahoria, tu visión va a mejorar
+</dd>
+</dl>
+<h2 id="resumen">Resumen</h2>
+<table>
+  <tr> <th> 
+Lista
+</th><td> 
+太郎とジョンとマリアが来た <em>Tarô, John y Maria vinieron</em>
+</td> </tr>
+  <tr> <th> 
+(junto) con
+</th><td> 
+ジョンはマリアと映画を見る <em>John mira una pelicula con Maria</em>
+</td> </tr>
+  <tr> <th> 
+Reciprocidad
+</th><td> 
+太郎はマリアと結婚する <em>Tarô se casa con Maria</em>
+</td> </tr>
+  <tr> <th> 
+Cita directa
+</th><td> 
+彼は私に｢好きだ｣と言った <em>Él me dijo &quot;me agradas&quot;</em>
+</td> </tr>
+  <tr> <th> 
+Cita indirecta
+</th><td> 
+彼は私が好きだと言った <em>Él me dijo que le agradaba</em>
+</td> </tr>
+  <tr> <th> 
+Definición
+</th><td> 
+愛とは何でしょう？ <em>¿Qué es amor?</em>
+</td> </tr>
+  <tr> <th> 
+Con gitaigo/gion
+</th><td> 
+彼はへなへななと座った <em>Él se sentó, exhausto</em>
+</td> </tr>
+  <tr> <th> 
+Condicional
+</th><td> 
+映画を見ると分かるよ <em>Si ves la pelicula, vas a entender</em>
+</td> </tr>
+</table>
+
+
+
+
+
+<div class="references">
+
+</div>
+
+	</div> <!-- contentbody -->
+	</div> <!-- content -->
+
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">と</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="particula_de.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="particula_ya-toka.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+	</div> <!-- wrapper -->
+</body>
+</html>
