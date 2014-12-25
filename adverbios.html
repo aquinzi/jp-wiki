@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Adverbios</title>
+  <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+    *           { margin: 0; padding: 0; }
+    html, body  { color: black; }
+
+    body {
+        padding: 0px 25px; 
+        margin: -1px auto;
+        font: 14px helvetica, "Segoe UI", arial, freesans, sans-serif; 
+        line-height: 1.8em;
+        color: #3A3A3A;
+        background-color: #f2f2f2;
+    }
+
+    p { margin: 1em 0; }
+
+    a {text-decoration: none; border-bottom: 1px dotted; color: #4183c4; }
+    a:hover, a:active { color: #75A837; }
+
+    blockquote {
+        margin: 14px 0; padding: 0.7em 11px;
+        color: #555;
+        font-style: italic;
+        border-left: 10px solid #838383;
+    }
+
+    img {
+        display:          block;
+        background-color: #F3F3F2;
+        border:           1px solid #D9D9D7;
+        margin:           0px auto;   padding: 5px;
+    }
+
+    ins { color:#008000; }
+    del { color:#ACACAC; }
+
+    hr { border: 0; height: 1px; background: #333; }
+
+    sup, sub, a.footnote-ref {
+        height:         0;
+        line-height:    1;
+        vertical-align: super;
+        position:       relative;
+    }
+
+    sub             {vertical-align: sub; top: -1px; }
+    a.footnote-ref { font-size: 1em; }
+
+    abbr { border-bottom: 1px dotted }
+
+    h1,h2,h3,h4,h5,h6 { margin: 1.5em 0px 1em; padding: 4px 0; border-bottom: 1px solid #e0e0e0; }
+    h1 { font-size: 2em;}
+    h2 { font-size: 1.571em; }
+    h3 { font-size: 1.429em; }
+    h4 { font-size: 1.286em; }
+    h5 { font-size: 1.143em; color: #4d4d4d;}
+    h6 { font-size: 1em; color: #666; }
+    h1.title { margin:0 }
+
+    ul, ol  { margin: 21px 0 0px 30px; list-style-position: outside; }
+    li      { margin: 7px 0 }
+    ul      { list-style-type: disc; }
+    ol      { list-style-type: decimal-leading-zero; }
+
+    dl, dt, dd { margin: 0; }
+    dl { padding: 0px 1em 10px; }
+    dt { padding: 5px 0 5px; font-weight: bold; line-height: normal; }
+    dd { padding: 0 10px 20px 3em; font-style: italic; }
+
+    /* based on http://icant.co.uk/csstablegallery/tables/50.php (Blaugrana). */
+    table { 
+        padding: 0; margin: 0 auto 2em auto;
+        border-spacing: 0; border-collapse: collapse;
+        min-width: 50%;
+        border: 1px solid;
+    }
+    th, caption {color: #444; font-weight: bold;text-align: center;}
+    td, th {padding: .6em .4em; vertical-align: top; border: 1px solid #779; }
+    th, tfoot td {border: 1px solid #361; background: #e0e5cf; }
+    /*tr { background:#f5f5f5 }*/
+    tr { background: #cfe0e5 }
+    tr.odd { background: #e5cfe0 }
+    tr.odd td, tr.odd th { border-color: #977; }
+
+    pre, code {
+        border:         1px solid #ccc;
+        font-size:      12px;
+        font-family:    Consolas, "Liberation Mono", Courier, monospace;
+        background-color:#eee;
+    }
+
+    pre  { margin: 5px 0 0; padding: 6px 5px; white-space: pre; overflow: auto; }
+    code { margin: 0 2px; padding: 2px 5px; /*white-space: nowrap;*/ }
+
+    pre code {border: none }
+
+    #TOC    { margin-top: 30px; background-color: #e5efdf; border: 1px solid #cedec4;}
+    #TOC a  { margin: 0 15px !important; }
+    #TOC ul {
+        margin: 1px 0 0 15px !important;    
+        padding: 0 0 0 1px !important;
+        display: block;
+        line-height: 20px;
+        list-style: none;
+    }
+    #TOC ul li  { border-left: 1px solid; position: relative; margin:0 !important; }
+    #TOC ul > #TOC li { padding-bottom: 10px !important;}
+    #TOC ul li:before {
+        content: '';
+        width: 14px;
+        position: absolute;
+        border-bottom: 1px solid;
+        left: 0px;
+        top: 10px;
+    }
+    #TOC ul li:last-child {border-left:none;}
+    #TOC ul li:last-child:before {border-left:1px solid; height: 10px; margin-top:-10px !important; }
+    #TOC ul li, #TOC ul li:before, #TOC ul li:last-child:before {border-color: #7A7A7A; }
+    .admonition p   { margin: 0.5em 1em 0.5em 1em; padding: 0;}
+    .admonition pre { margin: 0.4em 1em 0.4em 1em;}
+    .admonition ul, .admonition ol { margin: 0.1em 0.5em 0.5em 3em;   padding: 0;}
+
+    .admonition {
+        margin: 2em; padding: 0;
+        font-size:        0.9em;
+        border:           1px solid #c2c2c2;
+        background-color: #e9e9e9;
+    }
+
+    .admonition p.admonition-title {
+        margin:     0;
+        padding:    0.1em 0 0.1em 0.5em;
+        font-size:  1.1em;
+        font-weight: bold;
+        color:      #fff;
+        border-bottom: 1px solid #c2c2c2;
+        background-color: #999; 
+    }
+
+    .admonition.error, .admonition.caution, .admonition.danger
+    {border-color: #900000; background-color: #ffe9e9;}
+
+    .error p.admonition-title, .caution p.admonition-title, .danger p.admonition-title
+    {background-color: #b04040; border-color: #900000;}
+
+    .admonition.hint
+    {background-color: #ECFAE3;  border-color: #609060;}
+
+    .hint p.admonition-title
+    {background-color: #70A070; border-color: #609060;}
+
+    .admonition.note, .admonition.tip, .admonition.warning
+    {border-color:#e2ba54; background-color:#fcfce1;}
+
+    .note p.admonition-title, .tip p.admonition-title, .warning p.admonition-title
+    {background-color: #f1d170; border-color:#e2ba54;}
+
+    .admonition.info, .admonition.attention, .admonition.important
+    {background-color: #e8edfc; border-color: #94A7BF;}
+
+    .info p.admonition-title, .attention p.admonition-title, .important p.admonition-title
+    {background-color: #7088A0; border-color: #94A7BF;}
+
+    mark {background-color: #e7d600; padding: 0.2em;}
+
+    .bookbar {padding: 10px; border: 1px solid #ccc; border-width: 1px 0; overflow: auto}
+    .bookbar li {display: inline-block;}
+    .bookbar ul {margin: 0}
+    .breadcrumbs {float: left;}
+    .breadcrumbs li:after {content: "\0BB \020" /* » */; padding-left: 0.6em;}
+    .breadcrumbs li:last-child:after {content: ""}
+    .booknav {float:right;}
+    .booknav li {padding: 0 1.0em;}
+
+    #content {display: table-row;}
+
+    #sidebar {display: table-cell; width: 240px; font-size: small; background-color: #eeeeee;}
+    #sidebar ul ul {margin: 5px 0px 0px 5px;}
+    #sidebar ul ul li {margin-left: 10px;}
+    #sidebar ul {list-style: decimal;}
+    #sidebar ul ul {list-style: lower-alpha;}
+    #sidebar ul ul ul {list-style: lower-roman;}
+    #sidebar li.active > a {font-weight: bold}
+
+    #content-body {padding: 20px; font-size: 16px;}
+
+    #footer {padding: 10px; font-size: small; }
+</style></head><body>
+	<div id="wrapper">
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Adverbios</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="naru.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="descripcion_cosas.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="content">
+
+	<div id="sidebar">
+	<ul><li><a href="basico_escritura-pronunciacion.html">Escritura y pronunciación</a></li><li><a href="basico_pronombres.html">Pronombres</a></li><li><a href="basico_numeros.html">Números</a></li><li><a href="basico_extra.html">Nociones básicas, extra</a></li><li><a href="tiempo.html">Tiempo</a></li><li><a href="colores.html">Colores</a></li><li><a href="greetings.html">Greetings</a></li><li><a href="desu.html">です</a></li><li><a href="sustantivos.html">Sustantivos</a></li><li><a href="kosoado.html">Ko-So-A-Do</a></li><li><a href="contadores.html">Contadores</a></li><li><a href="adjetivos.html">Adjetivos</a></li><li><a href="verbos.html">Verbos</a></li><li><a href="forma-simple.html">Usos de la forma simple</a></li><li><a href="aru-iru.html">ある, いる</a></li><li><a href="naru.html">なる</a></li><li class='active'><a href="">Adverbios</a><ul><li><a href="#adverbios-de-tiempo">Adverbios de tiempo</a></li><li><a href="#adverbios-de-frecuencia">Adverbios de frecuencia</a></li><li><a href="#adverbios-de-lugar">Adverbios de lugar</a></li><li><a href="#adverbios-de-maneramodo-manner">Adverbios de manera/modo, manner</a></li><li><a href="#adverbios-de-cantidad">Adverbios de cantidad</a></li><li><a href="#adverbios-intraducibles">Adverbios intraducibles</a></li></ul></li><li><a href="descripcion_cosas.html">Describiendo donde estan las cosas</a></li><li><a href="expresar-cuanto.html">Expresar "¿Cuánto?"</a></li><li><a href="nanika-nanimo.html">何か, 何も</a></li><li><a href="expresar-cantidad.html">Expresión de cantidad</a></li><li><a href="duracion-actividad.html">Duración de actividad</a></li><li><a href="particulas.html">Particulas</a></li></ul>
+	</div>
+
+	<div id="content-body">
+
+<div id="header">
+<h1 class="title">Adverbios</h1>
+</div>
+<p>Los adverbios suelen estar delante del verbo o adjetivo que modifican. Según el tipo de adjetivo las reglas de formación de adverbios cambian:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">adjetivo</th>
+<th align="left">regla</th>
+<th align="left">ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">i</td>
+<td align="left">se quita la i final y se añade ku</td>
+<td align="left">新しい --&gt; 新しく (nuevamente)</td>
+</tr>
+<tr class="even">
+<td align="left">na</td>
+<td align="left">se cambia na por ni</td>
+<td align="left">静かな --&gt; 静かに (tranquilamente)</td>
+</tr>
+</tbody>
+</table>
+<p>Otras formas para formar adverbios:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">forma</th>
+<th align="left">ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sufijo 的に</td>
+<td align="left">具体 (concreto) --&gt; 具体的に (concretamente)</td>
+</tr>
+<tr class="even">
+<td align="left">forma –te</td>
+<td align="left">喜んで (alegremente), はじめて (por primera vez)</td>
+</tr>
+<tr class="odd">
+<td align="left">repetición de una palabra</td>
+<td align="left">時々 (a veces), しばしば (a menudo), いちいち (uno por uno)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adverbios-de-tiempo">Adverbios de tiempo</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">今</td>
+<td align="left">Ahora</td>
+</tr>
+<tr class="even">
+<td align="left">今日</td>
+<td align="left">Hoy</td>
+</tr>
+<tr class="odd">
+<td align="left">昨日</td>
+<td align="left">Ayer</td>
+</tr>
+<tr class="even">
+<td align="left">明日</td>
+<td align="left">mañana</td>
+</tr>
+<tr class="odd">
+<td align="left">まだ</td>
+<td align="left">Aún, todavía</td>
+</tr>
+<tr class="even">
+<td align="left">もう</td>
+<td align="left">Ya, already</td>
+</tr>
+</tbody>
+</table>
+<p>もう indica algo que no esta en el mismo estado que estaba antes.</p>
+<dl>
+<dt>山田さんは<mark>もう</mark>昼ご飯を食べた</dt>
+<dd><p>Sr. Yamada ya comió su almuerzo</p>
+</dd>
+<dt>利香は<mark>もう</mark>宿題をしました</dt>
+<dd><p>Rika ya terminó su tarea</p>
+</dd>
+<dt>リックは<mark>もう</mark>中国語を勉強していない</dt>
+<dd><p>Rick ya no estudia más chino</p>
+</dd>
+</dl>
+<p>まだ indica algo que se sigue en el mismo estado que antes.</p>
+<dl>
+<dt>料理は<mark>まだ</mark>出来ていない。</dt>
+<dd><p>La comida todavía no está lista.</p>
+</dd>
+<dt>カレーは<mark>まだ</mark>残っていますか？</dt>
+<dd><p>¿Todavía queda curry?</p>
+</dd>
+<dt><mark>まだ</mark>何もをたべたいなうよ</dt>
+<dd><p>Todavía no comí nada</p>
+</dd>
+<dt>私は<mark>まだ</mark>日本人のことを理解できない</dt>
+<dd><p>Sigo sin entender a los japoneses</p>
+</dd>
+</dl>
+<p><mark>もう</mark>食べましたか？</p>
+<ol style="list-style-type: lower-alpha">
+<li>はい、<mark>もう</mark>食べました<br /></li>
+<li>いいえ、<mark>まだ</mark>食べません</li>
+</ol>
+<h2 id="adverbios-de-frecuencia">Adverbios de frecuencia</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">毎日</td>
+<td align="left">Todos los dias</td>
+</tr>
+<tr class="even">
+<td align="left">よく</td>
+<td align="left">A menudo</td>
+</tr>
+<tr class="odd">
+<td align="left">時々</td>
+<td align="left">A veces</td>
+</tr>
+<tr class="even">
+<td align="left">全然</td>
+<td align="left">Nunca; para nada (concluye con ません)</td>
+</tr>
+<tr class="odd">
+<td align="left">あまり</td>
+<td align="left">No muy amenudo; No mucho (concluye con ません)</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>私は<mark>ときどき</mark>喫茶店に行きます</dt>
+<dd><p>A veces voy a una cafetería</p>
+</dd>
+<dt>私は<mark>ぜんぜん</mark>テレビを見ません</dt>
+<dd><p>No miro TV para nada　</p>
+</dd>
+<dt>サラは日本語が<mark>あまり</mark>上手ではない</dt>
+<dd><p>Sarah no es muy buena en japonés</p>
+</dd>
+<dt>寿司は<mark>あまり</mark>好きじゃない</dt>
+<dd><p>No me gusta mucho el sushi</p>
+</dd>
+<dt>今日はカラオケで<mark>あまり</mark>歌いたくない</dt>
+<dd><p>Hoy, no me siento como para ir a cantar karaoke</p>
+</dd>
+</dl>
+<p>A veces, あまり, cuando se añade に, se usa en verbos no negativos y adjetivos, y significa &quot;tan&quot; (&quot;so much&quot;) o &quot;mucho&quot; (&quot;very much&quot;).</p>
+<dl>
+<dt><mark>あまりに</mark>眠かったので授業で寝てしまった</dt>
+<dd><p>Estaba tan cansado que me quede dormido en clase</p>
+</dd>
+<dt><mark>あまりに</mark>失礼だったから殴ってしまった</dt>
+<dd><p>Él fue rudo, le pegué</p>
+</dd>
+</dl>
+<h2 id="adverbios-de-lugar">Adverbios de lugar</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">いつ</td>
+<td align="left">¿Cuándo?</td>
+</tr>
+<tr class="even">
+<td align="left">下に</td>
+<td align="left">Debajo de</td>
+</tr>
+<tr class="odd">
+<td align="left">上に</td>
+<td align="left">Encima de, sobre</td>
+</tr>
+<tr class="even">
+<td align="left">傍に</td>
+<td align="left">Al lado de</td>
+</tr>
+<tr class="odd">
+<td align="left">前に</td>
+<td align="left">Delante de</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>私はテレビをテーブルの<mark>前に</mark>置く。</dt>
+<dd>Dejo el televisor delante de la mesa
+</dd>
+</dl>
+<h2 id="adverbios-de-maneramodo-manner">Adverbios de manera/modo, manner</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">後ろに</td>
+<td align="left">Detrás de</td>
+</tr>
+<tr class="even">
+<td align="left">きっと</td>
+<td align="left">ciertamente</td>
+</tr>
+<tr class="odd">
+<td align="left">ゆっくり</td>
+<td align="left">lentamente</td>
+</tr>
+<tr class="even">
+<td align="left">よく</td>
+<td align="left">Mucho, bien</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>私は<mark>ゆっくり</mark>歩きます</dt>
+<dd>Camino lentamente<br />
+</dd>
+<dt>彼は<mark>静かに</mark>勉強します　</dt>
+<dd>Él estudia tranquilamente/
+</dd>
+</dl>
+<h2 id="adverbios-de-cantidad">Adverbios de cantidad</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">どんなに</td>
+<td align="left">¿Cómo?, how</td>
+</tr>
+<tr class="even">
+<td align="left">いくら</td>
+<td align="left">¿Cuánto?</td>
+</tr>
+<tr class="odd">
+<td align="left">何</td>
+<td align="left">¿Qué?</td>
+</tr>
+<tr class="even">
+<td align="left">とても</td>
+<td align="left">Muy, very</td>
+</tr>
+<tr class="odd">
+<td align="left">大変</td>
+<td align="left">Muy, very, serious</td>
+</tr>
+<tr class="even">
+<td align="left">たくさん</td>
+<td align="left">Mucho</td>
+</tr>
+<tr class="odd">
+<td align="left">十分</td>
+<td align="left">Suficiente</td>
+</tr>
+<tr class="even">
+<td align="left">だけ</td>
+<td align="left">Solamente, sólo, only</td>
+</tr>
+<tr class="odd">
+<td align="left">少し</td>
+<td align="left">Poco, a Little, some</td>
+</tr>
+<tr class="even">
+<td align="left">ちょっと</td>
+<td align="left">Poco, a Little, rather</td>
+</tr>
+<tr class="odd">
+<td align="left">もっと</td>
+<td align="left">más</td>
+</tr>
+<tr class="even">
+<td align="left">くらい</td>
+<td align="left">aproximadamente</td>
+</tr>
+<tr class="odd">
+<td align="left">ごろ</td>
+<td align="left">aproximadamente</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt><mark>ちょっと</mark>待ってください. 　</dt>
+<dd><p>Espera un poco, por favor.</p>
+</dd>
+<dt>ダンは日本語が<mark>とても</mark>上手です</dt>
+<dd><p>Dan es muy bueno en japonés</p>
+</dd>
+<dt>数学の授業は<mark>非常に</mark>難しいよ</dt>
+<dd><p>La clase de matemática es extremadamente dificil</p>
+</dd>
+<dt>あの道は<mark>大変</mark>危険です</dt>
+<dd><p>Esa ruta es horriblemente peligrosa</p>
+</dd>
+</dl>
+<p><strong>くらい y ごろ</strong></p>
+<p>Ambos se traducen como &quot;aproximadamente&quot; o &quot;mas o menos&quot;, pero su uso es muy diferente.</p>
+<p>くらい y ぐらい se usan para indicar una cantidad aproximada, de volumen, plata, tiempo, u alguna otra cosa. Cuando tienen un matiz de &quot;aproximada cosa&quot;, casi no tienen diferencia de uso o significado.</p>
+<dl>
+<dt>この間、梨を２キロ<mark>ぐらい</mark>買ったよ</dt>
+<dd><p>El otro dia compré mas o menos 2 kilos de peras</p>
+</dd>
+<dt>そのバイクは２百万円<mark>くらい</mark>です</dt>
+<dd><p>Esa moto costo como 2 mil yenes</p>
+</dd>
+</dl>
+<p>Hay que tener cuidado por que くらい se usa a veces con tono despectivo, significando &quot;por lo menos&quot;</p>
+<dl>
+<dt>一点<mark>ぐらい</mark>入れろよ、お前!</dt>
+<dd>Por lo menos hacé un punto, che!
+</dd>
+</dl>
+<p>ごろ refiere a un &quot;período de tiempo&quot; aproximado:</p>
+<dl>
+<dt>１０時<mark>ごろ</mark>に家を出ますよ</dt>
+<dd><p>Salimos de casa mas o menos a las 10</p>
+</dd>
+<dt>日本は６月<mark>ごろ</mark>に梅雨があります</dt>
+<dd><p>En Japón el período de lluvia es por Junio</p>
+</dd>
+</dl>
+<p>Oración para saber la diferencia entre ごろ y くらい:</p>
+<dl>
+<dt>私は５時間<mark>ぐらい</mark>働きました</dt>
+<dd><p>trabajé por cerca de 5 horas</p>
+</dd>
+<dt>私は５時間<mark>ごろ</mark>に働きに行った</dt>
+<dd><p>Fui al trabajo mas o menos a las 5</p>
+</dd>
+</dl>
+<h2 id="adverbios-intraducibles">Adverbios intraducibles</h2>
+<p>Algunas veces, se pueden encontrar adverbios con matices especiales o con adverbios que no tienen una traducción clara. Los más representativos:</p>
+<p><strong>やっぱり</strong></p>
+<p>Forma coloquial de やはり. Adverbio usado con el significado de &quot;justo lo que pensaba&quot;, &quot;justo lo que estaba esperando&quot; (&quot;just as was to be expected&quot;), o incluso &quot;después de todo&quot;.</p>
+<dl>
+<dt>彼は<mark>やっぱり</mark>ゲイですね</dt>
+<dd>(justo lo que pensaba / es obvio que / después de todo) él es gay, no?.
+</dd>
+</dl>
+<p><strong>まさか</strong></p>
+<p>Significado mas o menos similar a &quot;no me digas!&quot;, &quot;imposible!&quot;, &quot;estas bromeando!&quot;.</p>
+<p><strong>さすがに</strong></p>
+<p>Significado aproximado de &quot;como es esperado&quot; / &quot;as may be expected&quot;, &quot;es solo natural&quot;, &quot;es cierto&quot; / &quot;indeed&quot;.</p>
+<dl>
+<dt><mark>さすがに</mark>彼は速く走る</dt>
+<dd>(como es esperado) el corre rápido.
+</dd>
+</dl>
+<p><strong>とにかく</strong></p>
+<p>&quot;De todas formas&quot; / &quot;anyway&quot;, &quot;de cualquier manera&quot; / &quot;at any rate&quot;, &quot;all in all&quot;, &quot;somehow or other&quot;.</p>
+<dl>
+<dt><mark>とにかく</mark>家へ帰る</dt>
+<dd>(De todas formas) voy a casa (i’m going back home).
+</dd>
+</dl>
+
+	</div> <!-- contentbody -->
+	</div> <!-- content -->
+
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Adverbios</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="naru.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="descripcion_cosas.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+	</div> <!-- wrapper -->
+</body>
+</html>

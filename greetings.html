@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Greetings</title>
+  <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+    *           { margin: 0; padding: 0; }
+    html, body  { color: black; }
+
+    body {
+        padding: 0px 25px; 
+        margin: -1px auto;
+        font: 14px helvetica, "Segoe UI", arial, freesans, sans-serif; 
+        line-height: 1.8em;
+        color: #3A3A3A;
+        background-color: #f2f2f2;
+    }
+
+    p { margin: 1em 0; }
+
+    a {text-decoration: none; border-bottom: 1px dotted; color: #4183c4; }
+    a:hover, a:active { color: #75A837; }
+
+    blockquote {
+        margin: 14px 0; padding: 0.7em 11px;
+        color: #555;
+        font-style: italic;
+        border-left: 10px solid #838383;
+    }
+
+    img {
+        display:          block;
+        background-color: #F3F3F2;
+        border:           1px solid #D9D9D7;
+        margin:           0px auto;   padding: 5px;
+    }
+
+    ins { color:#008000; }
+    del { color:#ACACAC; }
+
+    hr { border: 0; height: 1px; background: #333; }
+
+    sup, sub, a.footnote-ref {
+        height:         0;
+        line-height:    1;
+        vertical-align: super;
+        position:       relative;
+    }
+
+    sub             {vertical-align: sub; top: -1px; }
+    a.footnote-ref { font-size: 1em; }
+
+    abbr { border-bottom: 1px dotted }
+
+    h1,h2,h3,h4,h5,h6 { margin: 1.5em 0px 1em; padding: 4px 0; border-bottom: 1px solid #e0e0e0; }
+    h1 { font-size: 2em;}
+    h2 { font-size: 1.571em; }
+    h3 { font-size: 1.429em; }
+    h4 { font-size: 1.286em; }
+    h5 { font-size: 1.143em; color: #4d4d4d;}
+    h6 { font-size: 1em; color: #666; }
+    h1.title { margin:0 }
+
+    ul, ol  { margin: 21px 0 0px 30px; list-style-position: outside; }
+    li      { margin: 7px 0 }
+    ul      { list-style-type: disc; }
+    ol      { list-style-type: decimal-leading-zero; }
+
+    dl, dt, dd { margin: 0; }
+    dl { padding: 0px 1em 10px; }
+    dt { padding: 5px 0 5px; font-weight: bold; line-height: normal; }
+    dd { padding: 0 10px 20px 3em; font-style: italic; }
+
+    /* based on http://icant.co.uk/csstablegallery/tables/50.php (Blaugrana). */
+    table { 
+        padding: 0; margin: 0 auto 2em auto;
+        border-spacing: 0; border-collapse: collapse;
+        min-width: 50%;
+        border: 1px solid;
+    }
+    th, caption {color: #444; font-weight: bold;text-align: center;}
+    td, th {padding: .6em .4em; vertical-align: top; border: 1px solid #779; }
+    th, tfoot td {border: 1px solid #361; background: #e0e5cf; }
+    /*tr { background:#f5f5f5 }*/
+    tr { background: #cfe0e5 }
+    tr.odd { background: #e5cfe0 }
+    tr.odd td, tr.odd th { border-color: #977; }
+
+    pre, code {
+        border:         1px solid #ccc;
+        font-size:      12px;
+        font-family:    Consolas, "Liberation Mono", Courier, monospace;
+        background-color:#eee;
+    }
+
+    pre  { margin: 5px 0 0; padding: 6px 5px; white-space: pre; overflow: auto; }
+    code { margin: 0 2px; padding: 2px 5px; /*white-space: nowrap;*/ }
+
+    pre code {border: none }
+
+    #TOC    { margin-top: 30px; background-color: #e5efdf; border: 1px solid #cedec4;}
+    #TOC a  { margin: 0 15px !important; }
+    #TOC ul {
+        margin: 1px 0 0 15px !important;    
+        padding: 0 0 0 1px !important;
+        display: block;
+        line-height: 20px;
+        list-style: none;
+    }
+    #TOC ul li  { border-left: 1px solid; position: relative; margin:0 !important; }
+    #TOC ul > #TOC li { padding-bottom: 10px !important;}
+    #TOC ul li:before {
+        content: '';
+        width: 14px;
+        position: absolute;
+        border-bottom: 1px solid;
+        left: 0px;
+        top: 10px;
+    }
+    #TOC ul li:last-child {border-left:none;}
+    #TOC ul li:last-child:before {border-left:1px solid; height: 10px; margin-top:-10px !important; }
+    #TOC ul li, #TOC ul li:before, #TOC ul li:last-child:before {border-color: #7A7A7A; }
+    .admonition p   { margin: 0.5em 1em 0.5em 1em; padding: 0;}
+    .admonition pre { margin: 0.4em 1em 0.4em 1em;}
+    .admonition ul, .admonition ol { margin: 0.1em 0.5em 0.5em 3em;   padding: 0;}
+
+    .admonition {
+        margin: 2em; padding: 0;
+        font-size:        0.9em;
+        border:           1px solid #c2c2c2;
+        background-color: #e9e9e9;
+    }
+
+    .admonition p.admonition-title {
+        margin:     0;
+        padding:    0.1em 0 0.1em 0.5em;
+        font-size:  1.1em;
+        font-weight: bold;
+        color:      #fff;
+        border-bottom: 1px solid #c2c2c2;
+        background-color: #999; 
+    }
+
+    .admonition.error, .admonition.caution, .admonition.danger
+    {border-color: #900000; background-color: #ffe9e9;}
+
+    .error p.admonition-title, .caution p.admonition-title, .danger p.admonition-title
+    {background-color: #b04040; border-color: #900000;}
+
+    .admonition.hint
+    {background-color: #ECFAE3;  border-color: #609060;}
+
+    .hint p.admonition-title
+    {background-color: #70A070; border-color: #609060;}
+
+    .admonition.note, .admonition.tip, .admonition.warning
+    {border-color:#e2ba54; background-color:#fcfce1;}
+
+    .note p.admonition-title, .tip p.admonition-title, .warning p.admonition-title
+    {background-color: #f1d170; border-color:#e2ba54;}
+
+    .admonition.info, .admonition.attention, .admonition.important
+    {background-color: #e8edfc; border-color: #94A7BF;}
+
+    .info p.admonition-title, .attention p.admonition-title, .important p.admonition-title
+    {background-color: #7088A0; border-color: #94A7BF;}
+
+    mark {background-color: #e7d600; padding: 0.2em;}
+
+    .bookbar {padding: 10px; border: 1px solid #ccc; border-width: 1px 0; overflow: auto}
+    .bookbar li {display: inline-block;}
+    .bookbar ul {margin: 0}
+    .breadcrumbs {float: left;}
+    .breadcrumbs li:after {content: "\0BB \020" /* » */; padding-left: 0.6em;}
+    .breadcrumbs li:last-child:after {content: ""}
+    .booknav {float:right;}
+    .booknav li {padding: 0 1.0em;}
+
+    #content {display: table-row;}
+
+    #sidebar {display: table-cell; width: 240px; font-size: small; background-color: #eeeeee;}
+    #sidebar ul ul {margin: 5px 0px 0px 5px;}
+    #sidebar ul ul li {margin-left: 10px;}
+    #sidebar ul {list-style: decimal;}
+    #sidebar ul ul {list-style: lower-alpha;}
+    #sidebar ul ul ul {list-style: lower-roman;}
+    #sidebar li.active > a {font-weight: bold}
+
+    #content-body {padding: 20px; font-size: 16px;}
+
+    #footer {padding: 10px; font-size: small; }
+</style></head><body>
+	<div id="wrapper">
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Greetings</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="colores.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="desu.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="content">
+
+	<div id="sidebar">
+	<ul><li><a href="basico_escritura-pronunciacion.html">Escritura y pronunciación</a></li><li><a href="basico_pronombres.html">Pronombres</a></li><li><a href="basico_numeros.html">Números</a></li><li><a href="basico_extra.html">Nociones básicas, extra</a></li><li><a href="tiempo.html">Tiempo</a></li><li><a href="colores.html">Colores</a></li><li class='active'><a href="">Greetings</a><ul><li><a href="#generales">Generales</a></li><li><a href="#expresiones-comunes">Expresiones comunes</a></li><li><a href="#presentarse">Presentarse</a></li><li><a href="#gracias">Gracias</a></li><li><a href="#despedidas">Despedidas</a></li><li><a href="#preguntar-precios">Preguntar precios</a></li><li><a href="#otras">Otras</a></li></ul></li><li><a href="desu.html">です</a></li><li><a href="sustantivos.html">Sustantivos</a></li><li><a href="kosoado.html">Ko-So-A-Do</a></li><li><a href="contadores.html">Contadores</a></li><li><a href="adjetivos.html">Adjetivos</a></li><li><a href="verbos.html">Verbos</a></li><li><a href="forma-simple.html">Usos de la forma simple</a></li><li><a href="aru-iru.html">ある, いる</a></li><li><a href="naru.html">なる</a></li><li><a href="adverbios.html">Adverbios</a></li><li><a href="descripcion_cosas.html">Describiendo donde estan las cosas</a></li><li><a href="expresar-cuanto.html">Expresar "¿Cuánto?"</a></li><li><a href="nanika-nanimo.html">何か, 何も</a></li><li><a href="expresar-cantidad.html">Expresión de cantidad</a></li><li><a href="duracion-actividad.html">Duración de actividad</a></li><li><a href="particulas.html">Particulas</a></li></ul>
+	</div>
+
+	<div id="content-body">
+
+<div id="header">
+<h1 class="title">Greetings</h1>
+</div>
+<h2 id="generales">Generales</h2>
+<dl>
+<dt>(お)元気ですか？ | 元気です, あなたは？</dt>
+<dd>¿Como estas? | Bien, ¿Vos (como estas)?<br />
+</dd>
+<dt>おはよう</dt>
+<dd>Buenos días (informal) (hasta las 11am)<br />
+</dd>
+<dt>おはようございます</dt>
+<dd>Buenos días (polite) (hasta las 11am)<br />
+</dd>
+<dt>こんにちは</dt>
+<dd>Buenas tardes / Good afternoon (mediodía de 11 am a 6pm)<br />
+</dd>
+<dt>こんばんは</dt>
+<dd>Buenas tardes / good evening (desde las 6pm)<br />
+</dd>
+<dt>おやすみなさい</dt>
+<dd>Buenas noches (al irse a dormir)<br />
+</dd>
+<dt>失礼します</dt>
+<dd>Con permiso / Me retiro ¿Interrumpo algo? (Expresión usada al entrar o salir de un lugar)<br />
+</dd>
+<dt>ただいま</dt>
+<dd>Ya estoy en casa (Expresión que se dice al entrar en la propia casa)<br />
+</dd>
+<dt>お帰りなさい</dt>
+<dd>bienvenido (respuesta al &quot;tadaima&quot; )<br />
+</dd>
+<dt>行ってきます</dt>
+<dd>me marcho / ahora vuelvo / &quot;I'll go and come back&quot; (expresión usada al salir de la propia casa)<br />
+</dd>
+<dt>行ってらっしゃい</dt>
+<dd>No tardes / Hasta pronto / &quot;please go and come back&quot; (Respuesta al &quot;itte kimasu&quot;)<br />
+</dd>
+<dt>お邪魔します</dt>
+<dd>Con permiso (expresión al entrar en casa ajena; Lit. estoy molestando)<br />
+</dd>
+<dt>いらっしゃい</dt>
+<dd>adelante, pase / bienvenido (Respuesta al o-jama shimasu)<br />
+</dd>
+<dt>ごめんください</dt>
+<dd>¿Hay alguien en casa? / ¡Disculpe! (Al entrar en casa ajena pero no hay nadie en la puerta para recibir)<br />
+</dd>
+<dt>いらっしゃいませ(ん)</dt>
+<dd>¡Bienvenido (a nuestra tienda)! / ¿Que desea? / ¿En qué puedo ayudarle? (Saludo del tendero/comerciante al cliente (no se responde))
+</dd>
+</dl>
+<h2 id="expresiones-comunes">Expresiones comunes</h2>
+<dl>
+<dt>ごめん/ごめんなさい</dt>
+<dd>Perdón (Disculpa, expresión de perdón)<br />
+</dd>
+<dt>すみません</dt>
+<dd><ol style="list-style-type: lower-alpha">
+<li>disculpa<br /></li>
+<li>para llamar la atención. Originalmente significa &quot;permiso&quot; o &quot;disculpe&quot;. Es muy usada con el sentido de &quot;gracias&quot;.</li>
+</ol>
+Ejemplo: a X se le cae una moneda, y Z la levanta y se la devuelve a X. En este caso, en vez de ありがとう, X muy probablemente va a agradecer el gesto de Z con すみません. Esta forma de &quot;agradecer&quot; implica algo como &quot;Perdon por hacerte hacer el problema de hacerme este favor (y gracias por eso)&quot;.<br />
+</dd>
+<dt>いただきます</dt>
+<dd>Buen provecho / Gracias por la comida / Thank you for the meal (before eating) (Al empezar a comer; Lit. aceptemos)<br />
+</dd>
+<dt>ご馳走様でした</dt>
+<dd>Estaba muy bueno Gracias por la comida / Gracias por la comida / Thank you for the meal (after eating) (Al terminar de comer, expresión de agradecimiento)<br />
+</dd>
+<dt>お疲れ様</dt>
+<dd>Buen trabajo (Parecido a &quot;o-tsukare-sama&quot;; Lit. gracias por cansarse)<br />
+</dd>
+<dt>おめでとうございます</dt>
+<dd>Felicidades (Expresión de felicitación)<br />
+</dd>
+<dt>宜しくお願いします</dt>
+<dd>Se lo ruego / Encantado / Lo dejo en tus manos (Tras pedir un favor o que alguien haga algo por el hablante; Lit. (ver cuerpo de texto); expresión usada cuando acabamos de pedir un favor a alguien, cuando acabamos de conocer a alguien o cuando dejamos algo en manos de otra persona. Lit. &quot;ruego humildemente su favorable consideración&quot;.<br />
+</dd>
+<dt>お待たせしました</dt>
+<dd>Perdon por la espera. (lit. &quot;hice esperar&quot;.)<br />
+</dd>
+<dt>お大事に</dt>
+<dd>&quot;Que te mejores&quot; . Utilizada para despedirse de alguien que está enfermo.<br />
+</dd>
+<dt>お久しぶりです (o 久しぶり)</dt>
+<dd>&quot;hacia mucho tiempo (que no nos veíamos)&quot;.<br />
+</dd>
+<dt>汚いところですけれど、どぞう、上がってください</dt>
+<dd>Expresión usada en situaciones formales, cuando un japonés te invita a entrar a su casa lit. &quot;se trata de un sitio sucio, pero por favor, pase&quot;. --&gt; invitacion a la casa<br />
+</dd>
+<dt>つまらない物ですけれど、どぞう</dt>
+<dd>Cuando un japonés hace un regalo, tiende a rebajar lo que ofrece como muestra de humildad. (sólo en ocasiones muy formales) lit. &quot;se trata de algo insignificante, pero por favor, tómelo&quot;.<br />
+</dd>
+<dt>腹が減ったぜ</dt>
+<dd>Tengo hambre. Expresión masculina y bastante vulgar.<br />
+</dd>
+<dt>おなかがすいた</dt>
+<dd>tengo hambre. Forma estándar.<br />
+</dd>
+<dt>おなかがペコペコ</dt>
+<dd>Tengo hambre. Bastante usada por chicas o niños.<br />
+</dd>
+<dt>のどがかわいた</dt>
+<dd>Tengo sed. Forma estándar.<br />
+</dd>
+<dt>のどがカラカラ</dt>
+<dd>Tengo sed. Forma coloquial.
+</dd>
+</dl>
+<h2 id="presentarse">Presentarse</h2>
+<p>Persona A</p>
+<dl>
+<dt>はじめまして | はじめまして。どうぞよろしく。</dt>
+<dd>Encantado | ¿Cómo estas? gusto en conocerte / How are you? nice to meet you.<br />
+</dd>
+<dt>私の名前は[...]です。</dt>
+<dd>Mi nombre es [...] (Me llamo [...] )<br />
+</dd>
+<dt>よろしくお願いします。</dt>
+<dd>Encantado de conocerle<br />
+</dd>
+<dt>あなたの名前は何ですか。</dt>
+<dd>¿su nombre cuál es? (¿Cómo se llama usted?)
+</dd>
+</dl>
+<p>Persona B</p>
+<dl>
+<dt>私の名前は[...]です。</dt>
+<dd>Mi nombre es[...] (Me llamo[...])<br />
+</dd>
+<dt>こちらこそよろしく</dt>
+<dd>Encantado de conocerle (yo también)
+</dd>
+</dl>
+<h2 id="gracias">Gracias</h2>
+<p>Hay varias formas de dar las gracias.</p>
+<dl>
+<dt>ありがとう</dt>
+<dd>Gracias
+</dd>
+</dl>
+<p>Muy formal:</p>
+<dl>
+<dt>どうもありがとうございます。</dt>
+<dd>Muchas gracias<br />
+</dd>
+<dt>どうもありがとう</dt>
+<dd>Muchas gracias / thank you very much
+</dd>
+</dl>
+<p>Un poco menos formal que la anterior:</p>
+<dl>
+<dt>ありがとうございます。</dt>
+<dd>Gracias
+</dd>
+</dl>
+<p>Otra muy informal y sencilla:</p>
+<dl>
+<dt>どうも</dt>
+<dd>Gracias
+</dd>
+</dl>
+<p>La respuesta suele ser:</p>
+<dl>
+<dt>どういたしまして</dt>
+<dd>De nada / you're welcome
+</dd>
+</dl>
+<p>o más sencillamente:</p>
+<dl>
+<dt>いいえ</dt>
+<dd>De nada
+</dd>
+</dl>
+<h2 id="despedidas">Despedidas</h2>
+<p>La manera más conocida pero no es la más utilizada:</p>
+<dl>
+<dt>さようなら</dt>
+<dd>adiós
+</dd>
+</dl>
+<p>Usualmente se usan combinaciones de ja-mata:</p>
+<dl>
+<dt>それじゃまた明日会いましょう。</dt>
+<dd>Bueno, mañana nos volvemos a encontrar. (Forma completa)<br />
+</dd>
+<dt>じゃ、また明日</dt>
+<dd>Bueno, hasta mañana (forma más reducida)
+</dd>
+</dl>
+<p>Otras formas reducidas:</p>
+<dl>
+<dt>じゃね、また</dt>
+<dd>Bueno, hasta luego; nos vemos; see you soon. (entre amigos)<br />
+</dd>
+<dt>またね</dt>
+<dd>Hasta luego<br />
+</dd>
+<dt>バイバイ</dt>
+<dd><p>Bye bye</p>
+</dd>
+<dt>しつれいします</dt>
+<dd><p>Chau / Bye. Ex.: leaving from the professor office</p>
+</dd>
+</dl>
+<h2 id="preguntar-precios">Preguntar precios</h2>
+<dl>
+<dt>Vendedor: いらっしゃいませ</dt>
+<dd>Bienvenido/¿Qué desea?<br />
+</dd>
+<dt>Cliente (señalando): これはいくらですか。</dt>
+<dd>¿Cuánto cuesta esto?<br />
+</dd>
+<dt>V: これは_ _ 円です。</dt>
+<dd>Esto cuesta _ _ yenes<br />
+</dd>
+<dt>C: (queremos comprar eso) これおください。|これお願いします。</dt>
+<dd>quiero eso | deseo eso
+</dd>
+</dl>
+<h2 id="otras">Otras</h2>
+<dl>
+<dt>と思った</dt>
+<dd>&quot;pensar que&quot; (se usa más que en español).<br />
+</dd>
+<dt>やった！</dt>
+<dd>¡viva! ¡Lo he conseguido!<br />
+</dd>
+<dt>はい / ええ (informal)</dt>
+<dd>Si<br />
+</dd>
+<dt>いいえ</dt>
+<dd>No<br />
+</dd>
+<dt>(お)おい</dt>
+<dd>Hey<br />
+</dd>
+<dt>どうぞ</dt>
+<dd>Adelante / tenga<br />
+</dd>
+<dt>何？</dt>
+<dd>¿Qué?<br />
+</dd>
+<dt>あの(う)。。。</dt>
+<dd>um...<br />
+</dd>
+<dt>すごい</dt>
+<dd>bien! copado, great
+</dd>
+</dl>
+
+	</div> <!-- contentbody -->
+	</div> <!-- content -->
+
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Greetings</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="colores.html">&lt; previous</a></li><li><a href="index.html">index</a></li><li><a href="desu.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+	</div> <!-- wrapper -->
+</body>
+</html>

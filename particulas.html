@@ -1,0 +1,913 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Particulas</title>
+  <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+    *           { margin: 0; padding: 0; }
+    html, body  { color: black; }
+
+    body {
+        padding: 0px 25px; 
+        margin: -1px auto;
+        font: 14px helvetica, "Segoe UI", arial, freesans, sans-serif; 
+        line-height: 1.8em;
+        color: #3A3A3A;
+        background-color: #f2f2f2;
+    }
+
+    p { margin: 1em 0; }
+
+    a {text-decoration: none; border-bottom: 1px dotted; color: #4183c4; }
+    a:hover, a:active { color: #75A837; }
+
+    blockquote {
+        margin: 14px 0; padding: 0.7em 11px;
+        color: #555;
+        font-style: italic;
+        border-left: 10px solid #838383;
+    }
+
+    img {
+        display:          block;
+        background-color: #F3F3F2;
+        border:           1px solid #D9D9D7;
+        margin:           0px auto;   padding: 5px;
+    }
+
+    ins { color:#008000; }
+    del { color:#ACACAC; }
+
+    hr { border: 0; height: 1px; background: #333; }
+
+    sup, sub, a.footnote-ref {
+        height:         0;
+        line-height:    1;
+        vertical-align: super;
+        position:       relative;
+    }
+
+    sub             {vertical-align: sub; top: -1px; }
+    a.footnote-ref { font-size: 1em; }
+
+    abbr { border-bottom: 1px dotted }
+
+    h1,h2,h3,h4,h5,h6 { margin: 1.5em 0px 1em; padding: 4px 0; border-bottom: 1px solid #e0e0e0; }
+    h1 { font-size: 2em;}
+    h2 { font-size: 1.571em; }
+    h3 { font-size: 1.429em; }
+    h4 { font-size: 1.286em; }
+    h5 { font-size: 1.143em; color: #4d4d4d;}
+    h6 { font-size: 1em; color: #666; }
+    h1.title { margin:0 }
+
+    ul, ol  { margin: 21px 0 0px 30px; list-style-position: outside; }
+    li      { margin: 7px 0 }
+    ul      { list-style-type: disc; }
+    ol      { list-style-type: decimal-leading-zero; }
+
+    dl, dt, dd { margin: 0; }
+    dl { padding: 0px 1em 10px; }
+    dt { padding: 5px 0 5px; font-weight: bold; line-height: normal; }
+    dd { padding: 0 10px 20px 3em; font-style: italic; }
+
+    /* based on http://icant.co.uk/csstablegallery/tables/50.php (Blaugrana). */
+    table { 
+        padding: 0; margin: 0 auto 2em auto;
+        border-spacing: 0; border-collapse: collapse;
+        min-width: 50%;
+        border: 1px solid;
+    }
+    th, caption {color: #444; font-weight: bold;text-align: center;}
+    td, th {padding: .6em .4em; vertical-align: top; border: 1px solid #779; }
+    th, tfoot td {border: 1px solid #361; background: #e0e5cf; }
+    /*tr { background:#f5f5f5 }*/
+    tr { background: #cfe0e5 }
+    tr.odd { background: #e5cfe0 }
+    tr.odd td, tr.odd th { border-color: #977; }
+
+    pre, code {
+        border:         1px solid #ccc;
+        font-size:      12px;
+        font-family:    Consolas, "Liberation Mono", Courier, monospace;
+        background-color:#eee;
+    }
+
+    pre  { margin: 5px 0 0; padding: 6px 5px; white-space: pre; overflow: auto; }
+    code { margin: 0 2px; padding: 2px 5px; /*white-space: nowrap;*/ }
+
+    pre code {border: none }
+
+    #TOC    { margin-top: 30px; background-color: #e5efdf; border: 1px solid #cedec4;}
+    #TOC a  { margin: 0 15px !important; }
+    #TOC ul {
+        margin: 1px 0 0 15px !important;    
+        padding: 0 0 0 1px !important;
+        display: block;
+        line-height: 20px;
+        list-style: none;
+    }
+    #TOC ul li  { border-left: 1px solid; position: relative; margin:0 !important; }
+    #TOC ul > #TOC li { padding-bottom: 10px !important;}
+    #TOC ul li:before {
+        content: '';
+        width: 14px;
+        position: absolute;
+        border-bottom: 1px solid;
+        left: 0px;
+        top: 10px;
+    }
+    #TOC ul li:last-child {border-left:none;}
+    #TOC ul li:last-child:before {border-left:1px solid; height: 10px; margin-top:-10px !important; }
+    #TOC ul li, #TOC ul li:before, #TOC ul li:last-child:before {border-color: #7A7A7A; }
+    .admonition p   { margin: 0.5em 1em 0.5em 1em; padding: 0;}
+    .admonition pre { margin: 0.4em 1em 0.4em 1em;}
+    .admonition ul, .admonition ol { margin: 0.1em 0.5em 0.5em 3em;   padding: 0;}
+
+    .admonition {
+        margin: 2em; padding: 0;
+        font-size:        0.9em;
+        border:           1px solid #c2c2c2;
+        background-color: #e9e9e9;
+    }
+
+    .admonition p.admonition-title {
+        margin:     0;
+        padding:    0.1em 0 0.1em 0.5em;
+        font-size:  1.1em;
+        font-weight: bold;
+        color:      #fff;
+        border-bottom: 1px solid #c2c2c2;
+        background-color: #999; 
+    }
+
+    .admonition.error, .admonition.caution, .admonition.danger
+    {border-color: #900000; background-color: #ffe9e9;}
+
+    .error p.admonition-title, .caution p.admonition-title, .danger p.admonition-title
+    {background-color: #b04040; border-color: #900000;}
+
+    .admonition.hint
+    {background-color: #ECFAE3;  border-color: #609060;}
+
+    .hint p.admonition-title
+    {background-color: #70A070; border-color: #609060;}
+
+    .admonition.note, .admonition.tip, .admonition.warning
+    {border-color:#e2ba54; background-color:#fcfce1;}
+
+    .note p.admonition-title, .tip p.admonition-title, .warning p.admonition-title
+    {background-color: #f1d170; border-color:#e2ba54;}
+
+    .admonition.info, .admonition.attention, .admonition.important
+    {background-color: #e8edfc; border-color: #94A7BF;}
+
+    .info p.admonition-title, .attention p.admonition-title, .important p.admonition-title
+    {background-color: #7088A0; border-color: #94A7BF;}
+
+    mark {background-color: #e7d600; padding: 0.2em;}
+
+    .bookbar {padding: 10px; border: 1px solid #ccc; border-width: 1px 0; overflow: auto}
+    .bookbar li {display: inline-block;}
+    .bookbar ul {margin: 0}
+    .breadcrumbs {float: left;}
+    .breadcrumbs li:after {content: "\0BB \020" /* » */; padding-left: 0.6em;}
+    .breadcrumbs li:last-child:after {content: ""}
+    .booknav {float:right;}
+    .booknav li {padding: 0 1.0em;}
+
+    #content {display: table-row;}
+
+    #sidebar {display: table-cell; width: 240px; font-size: small; background-color: #eeeeee;}
+    #sidebar ul ul {margin: 5px 0px 0px 5px;}
+    #sidebar ul ul li {margin-left: 10px;}
+    #sidebar ul {list-style: decimal;}
+    #sidebar ul ul {list-style: lower-alpha;}
+    #sidebar ul ul ul {list-style: lower-roman;}
+    #sidebar li.active > a {font-weight: bold}
+
+    #content-body {padding: 20px; font-size: 16px;}
+
+    #footer {padding: 10px; font-size: small; }
+</style></head><body>
+	<div id="wrapper">
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Particulas</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="duracion-actividad.html">&lt; previous</a></li><li><a href="index.html">index</a></li></ul>
+	</div>
+
+
+	<div id="content">
+
+	<div id="sidebar">
+	<ul><li><a href="basico_escritura-pronunciacion.html">Escritura y pronunciación</a></li><li><a href="basico_pronombres.html">Pronombres</a></li><li><a href="basico_numeros.html">Números</a></li><li><a href="basico_extra.html">Nociones básicas, extra</a></li><li><a href="tiempo.html">Tiempo</a></li><li><a href="colores.html">Colores</a></li><li><a href="greetings.html">Greetings</a></li><li><a href="desu.html">です</a></li><li><a href="sustantivos.html">Sustantivos</a></li><li><a href="kosoado.html">Ko-So-A-Do</a></li><li><a href="contadores.html">Contadores</a></li><li><a href="adjetivos.html">Adjetivos</a></li><li><a href="verbos.html">Verbos</a></li><li><a href="forma-simple.html">Usos de la forma simple</a></li><li><a href="aru-iru.html">ある, いる</a></li><li><a href="naru.html">なる</a></li><li><a href="adverbios.html">Adverbios</a></li><li><a href="descripcion_cosas.html">Describiendo donde estan las cosas</a></li><li><a href="expresar-cuanto.html">Expresar "¿Cuánto?"</a></li><li><a href="nanika-nanimo.html">何か, 何も</a></li><li><a href="expresar-cantidad.html">Expresión de cantidad</a></li><li><a href="duracion-actividad.html">Duración de actividad</a></li><li class='active'><a href="">Particulas</a><ul><li><a href="#case-markers-格助詞">Case markers (格助詞)</a></li><li><a href="#parallel-markers-並立助詞">Parallel markers (並立助詞)</a></li><li><a href="#sentence-ending-particles-終助詞">Sentence ending particles (終助詞)</a></li><li><a href="#interjectory-particles-間投助詞">Interjectory particles (間投助詞)</a></li><li><a href="#adverbial-particles-副助詞">Adverbial particles (副助詞)</a></li><li><a href="#binding-particles-係助詞">Binding particles (係助詞)</a></li><li><a href="#conjunctive-particles-接続助詞">Conjunctive particles (接続助詞)</a></li><li><a href="#phrasal-particles-準体助詞">Phrasal particles (準体助詞)</a></li><li><a href="#こと">こと</a></li><li><a href="#目-me">目 (me)</a></li><li><a href="#までに">までに</a></li><li><a href="#きり">きり</a></li><li><a href="#けど">けど</a></li><li><a href="#ごろ">ごろ</a></li><li><a href="#どころか">どころか</a></li><li><a href="#だらけ">だらけ</a></li><li><a href="#particulas-al-final-de-oración">Particulas al final de oración</a><ul><li><a href="#ぞ">ぞ</a></li><li><a href="#ぜ">ぜ</a></li><li><a href="#なあ">なあ</a></li><li><a href="#かな">かな</a></li><li><a href="#かい">かい</a></li></ul></li><li><a href="#unlisted">Unlisted</a></li></ul></li></ul>
+	</div>
+
+	<div id="content-body">
+
+<div id="header">
+<h1 class="title">Particulas</h1>
+</div>
+<h2 id="case-markers-格助詞">Case markers (格助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:ga][が]</td>
+<td align="left">es, soy, son; pero</td>
+</tr>
+<tr class="even">
+<td align="left">[:no][の]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:wo][を]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:ni][に]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:he][へ]</td>
+<td align="left">hacia</td>
+</tr>
+<tr class="even">
+<td align="left">[:to][と]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:de][で]</td>
+<td align="left">a, en, sobre; a través de, vía; porque/por tal motivo</td>
+</tr>
+<tr class="even">
+<td align="left">[:kara][から]</td>
+<td align="left">desde; después; porque</td>
+</tr>
+<tr class="odd">
+<td align="left">より</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parallel-markers-並立助詞">Parallel markers (並立助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:ka][か]</td>
+<td align="left">Marcador de pregunta; o</td>
+</tr>
+<tr class="even">
+<td align="left">[:no][の]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:ya][や]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:ni][に]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:to][と]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">やら</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">なり</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:dano][だの]</td>
+<td align="left">Y, o, y cosas así</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sentence-ending-particles-終助詞">Sentence ending particles (終助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:ka][か]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:no][の]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:ya][や]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:na][な]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:wa][わ]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">とも</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:kashira][かしら]</td>
+<td align="left">me pregunto (fem.)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interjectory-particles-間投助詞">Interjectory particles (間投助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:sa][さ]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:yo][よ]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:ne][ね]</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="adverbial-particles-副助詞">Adverbial particles (副助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:bakari][ばかり]</td>
+<td align="left">la única cosa; justo sucedió; listo para</td>
+</tr>
+<tr class="even">
+<td align="left">[:made][まで]</td>
+<td align="left">hasta</td>
+</tr>
+<tr class="odd">
+<td align="left">[:dake][だけ]</td>
+<td align="left">solo, justo</td>
+</tr>
+<tr class="even">
+<td align="left">[:hodo][ほど]</td>
+<td align="left">la extensión de</td>
+</tr>
+<tr class="odd">
+<td align="left">くらい/ぐらい</td>
+<td align="left">acerca, aproximadamente</td>
+</tr>
+<tr class="even">
+<td align="left">など</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">なり</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">やら</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="binding-particles-係助詞">Binding particles (係助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:ha][は]</td>
+<td align="left">marcador de tópico</td>
+</tr>
+<tr class="even">
+<td align="left">[:mo][も]</td>
+<td align="left">también</td>
+</tr>
+<tr class="odd">
+<td align="left">[:koso][こそ]</td>
+<td align="left">énfasis a palabra o frase</td>
+</tr>
+<tr class="even">
+<td align="left">[:demo][でも]</td>
+<td align="left">incluso</td>
+</tr>
+<tr class="odd">
+<td align="left">[:shika][しか]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">さえ</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">だに</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="conjunctive-particles-接続助詞">Conjunctive particles (接続助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:ya][や]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:ga][が]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">て</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:noni][のに]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">[:node][ので]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:kara][から]</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ところが</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">けれども</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="phrasal-particles-準体助詞">Phrasal particles (準体助詞)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">[:no][の]</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">[:kara][から]</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="こと">こと</h2>
+<p>Se pone despues de un verbo en base 3 para convertirlo en un sustantivo. Como en inglés: run -&gt; running, dance -&gt; dancing.</p>
+<dl>
+<dt>まなぶ<mark>こと</mark>がすきです</dt>
+<dd>Me gusta aprender<br />
+</dd>
+<dt>やまださんはおどる<mark>こと</mark>がきらいです</dt>
+<dd>Yamada odia bailar
+</dd>
+</dl>
+<h2 id="目-me">目 (me)</h2>
+<p>Ordinal.</p>
+<dl>
+<dt>一回<mark>目</mark>はそれを決めた。</dt>
+<dd>Es la primera vez que elijo ese.<br />
+</dd>
+<dt>日本は二回<mark>目</mark>です。</dt>
+<dd>Esta es mi segunda vez en Japón.
+</dd>
+</dl>
+<h2 id="までに">までに</h2>
+<p>Indica el tiempo limite de algo que esta ocurriendo (by the time, by). Similar a まで</p>
+<dl>
+<dt>9時<mark>までに</mark>レストランに来てください。</dt>
+<dd>Por favor ven al restaurante a las nueve<br />
+</dd>
+<dt>来月<mark>までに</mark>練習できます。</dt>
+<dd>Puedo practicar hasta el otro mes.<br />
+</dd>
+<dt>電車が神戸に着く<mark>までに</mark>メージャーリーグという映画を見た。</dt>
+<dd>Para cuando el tren arribó en Kobe, Ya habia mirado (la pelicula) Major League
+</dd>
+</dl>
+<h2 id="きり">きり</h2>
+<p>Indica que hay una cantidad limitada de algo. Actúa como un sustantivo que muestra, porque algo pasó no va a pasar nada mas. Significa Ya que/Since, Solo/Only</p>
+<div class="admonition info">
+<p>v.inf.past + っきり + algo<br />sustantivo de tiempo + きり<br />contador + きり</p>
+</div>
+<dl>
+<dt>ハリーポッターを読んだっ<mark>きり</mark>なので、ストリーを忘れた。</dt>
+<dd>Fue hace mucho tiempo que leí Harry Potter asique me olvidé la historia.<br />
+</dd>
+<dt>食べたっ<mark>きり</mark>トイレに出ない</dt>
+<dd>Ya que comió no va a salir del baño<br />
+</dd>
+<dt>今日きり</dt>
+<dd>solo hoy<br />
+</dd>
+<dt>三人っきり</dt>
+<dd>Solo tres personas
+</dd>
+</dl>
+<h2 id="けど">けど</h2>
+<p>けど es la forma casual de けれども　y けれど. Significa &quot;pero&quot;, &quot;aunque&quot;/&quot;although.&quot;</p>
+<div class="admonition info">
+<p>oración informal + けど</p>
+</div>
+<dl>
+<dt>彼は学生だ<mark>けど</mark>日本語を教えています。</dt>
+<dd>Although he is a student he is teaching Japanese.<br />
+</dd>
+<dt>東京に行った<mark>けど</mark>東京タワーを見えなかった。</dt>
+<dd>I went to Tokyo but I couldn’t see Tokyo Tower.<br />
+</dd>
+<dt>富士山は高かった<mark>けど</mark>登れました。</dt>
+<dd>Mt. Fuji was tall but I was able to climb it.
+</dd>
+</dl>
+<h2 id="ごろ">ごろ</h2>
+<p>Muestra la aproximación en tiempo. &quot;Cerca de seis minutos&quot; o &quot;cerca de tres meses&quot; (About, Around)</p>
+<p>El tiempo referido tiene que ser especifico; no puede ser &quot;a la noche&quot; o &quot;(a la) mañana&quot;</p>
+<div class="admonition info">
+<p>tiempo + ごろ</p>
+</div>
+<dl>
+<dt>五時<mark>頃</mark>に晩ご飯を食べます。</dt>
+<dd>Cerca de las cinco cenaremos<br />
+</dd>
+<dt>３月<mark>ごろ</mark>日本に帰るつもりだ。</dt>
+<dd>Por Marzo planeo volver a Japón<br />
+</dd>
+<dt>いつ<mark>ごろ</mark>スペインに行くつもりですか？</dt>
+<dd>Cuando planeas volver a España?
+</dd>
+</dl>
+<h2 id="どころか">どころか</h2>
+<p>Indica que algo o alguien esta lejos de cierto estado. Ej: &quot;Lejos de (poder) hablar inglés&quot; (Far From, Not Just)</p>
+<div class="admonition info">
+<ol start="22" style="list-style-type: lower-alpha">
+<li><ul>
+<li>どころか<br />adj.i + どころか<br />adj.na + な + どころか<br />sustantivo + どころか</li>
+</ul></li>
+</ol>
+</div>
+<dl>
+<dt>デザートが食べれる<mark>どころか</mark>、チキンを食べすぎた。</dt>
+<dd>Estoy lejos de comer postre; comi mucho pollo.<br />
+</dd>
+<dt>ボビーさんは漢字が読めない<mark>どころか</mark>、ひらがなもカタカナも読めない。</dt>
+<dd>Bobby no tan solo no puede leer kanji; tampoco puede leer hiragana y katakana.<br />
+</dd>
+</dl>
+<p>きれいなどころか<br />: Lejos de ser bonito<br />新しいどころか<br />: Lejos de ser nuevo<br />友達どころか<br />: Lejos de ser amigos</p>
+<h2 id="だらけ">だらけ</h2>
+<p>Es un sufijo que se adjunta a un sustantivo que indeica que algo esta cubierto/lleno con eso. También puede usarse para describir cosas intangibles cubriendo algo.</p>
+<p>Darake tiene una connotación negativa asique debe usarse en situaciones indeseables.</p>
+<div class="admonition info">
+<p>sustantivo + だらけ</p>
+</div>
+<dl>
+<dt>私の靴は泥<mark>だらけ</mark>だ！</dt>
+<dd>Mis zapatos estan cubiertos de barro!<br />
+</dd>
+<dt>手が…手が血<mark>だらけ</mark>！あぁあぁ〜！</dt>
+<dd>Mi mano... mi mano esta cubierta de sangre! AhhhHHhh!<br />
+</dd>
+<dt>虫<mark>だらけ</mark>のりんごを捨ててください。</dt>
+<dd>Por favor, tira esa manzana llena de bichos
+</dd>
+</dl>
+<h2 id="particulas-al-final-de-oración">Particulas al final de oración</h2>
+<p>Estas partículas se utilizan practicamente de forma exclusiva en el japonés oral y en situaciones informales. Las únicas aceptadas en japonés formal son [:ka][] y [:ne][] y, hasta cierto punto, [:yo][] y [:ha][].</p>
+<h3 id="ぞ">ぞ</h3>
+<p>Para hacer énfasis o una afirmación. Usado por hombres, es informal.</p>
+<dl>
+<dt>めっちゃ疲れた<mark>ぞ</mark>！</dt>
+<dd>¡Estoy hecho polvo!
+</dd>
+</dl>
+<h3 id="ぜ">ぜ</h3>
+<p>Para énfasis o afirmación; y para invitación. Usado por hombres (jóvenes), es informal, &quot;sonar copado&quot;.</p>
+<dl>
+<dt>あれは千円だ<mark>ぜ</mark>！</dt>
+<dd>¡Eh! ¡Allí hay mil yenes!<br />
+</dd>
+<dt>いっぱい遊ぶう<mark>ぜ</mark>！</dt>
+<dd>¡Vamos a divertirnos un montón!
+</dd>
+</dl>
+<h3 id="なあ">なあ</h3>
+<p>Exclamación</p>
+<h3 id="かな">かな</h3>
+<p>Indica una autoreflexión o una pregunta a uno mismo. A veces puede ser una pregunta a alguien cercano que está con uno, aunque también seria una pregunta planteada para uno.</p>
+<p>かな es una expresión masculina regular y una expresión casual femenina.</p>
+<div class="admonition info">
+<p>v.dict + かな<br />i.adj + かな<br />na.adj + かな<br />noun + かな</p>
+</div>
+<dl>
+<dt>スタークラフトをしよう<mark>かな</mark>。。。</dt>
+<dd>Me pregunto si debería jugar Starcraft...<br />
+</dd>
+<dt>ザーグを決めたらいい<mark>かな</mark>。。。</dt>
+<dd>Me pregunto si estaría bien buscar a Zerg...<br />
+</dd>
+<dt>韓国に行った<mark>かな</mark>。。。</dt>
+<dd>Me pregunto si fue a Korea...<br />
+</dd>
+<dt>高田さんは帰る<mark>かな</mark>。</dt>
+<dd>Me pregunto si Takada va a volver (a casa).<br />
+</dd>
+<dt>今日はすし<mark>かな</mark>。。。</dt>
+<dd>Me pregunto si hoy voy a comer sushi...<br />
+</dd>
+<dt>食べるかな</dt>
+<dd>I wonder if _ _ _ will eat<br />
+</dd>
+<dt>食べないかな</dt>
+<dd>I wonder if _ _ _ won’t eat<br />
+</dd>
+<dt>美味しいかな</dt>
+<dd>I wonder if _ _ _ is tasty<br />
+</dd>
+<dt>美味しかったかな</dt>
+<dd>I wonder if _ _ _ was tasty<br />
+</dd>
+<dt>静かかな</dt>
+<dd>I wonder if it is quiet<br />
+</dd>
+<dt>静かだったかな</dt>
+<dd>I wonder if it was quiet<br />
+</dd>
+<dt>猿かな</dt>
+<dd>I wonder if it’s a monkey<br />
+</dd>
+<dt>猿だったかな</dt>
+<dd>I wonder if it was a monkey
+</dd>
+</dl>
+<h3 id="かい">かい</h3>
+<p>かい sirve, como [:ka][], para hacer preguntas pero: 1) es usado por hombres; y 2) se usa mas para preguntas si/no.</p>
+<div class="admonition info">
+<p>oración casual + かい</p>
+</div>
+<dl>
+<dt>もう食べた<mark>かい</mark>？</dt>
+<dd>ya comiste?<br />
+</dd>
+<dt>買った車は赤<mark>かい</mark>？</dt>
+<dd>El auto que compraste es rojo?<br />
+</dd>
+<dt>友達<mark>かい</mark>？</dt>
+<dd>(Sos) un amigo?<br />
+</dd>
+<dt>沖縄に行くの<mark>かい</mark>？</dt>
+<dd>Vas a ir a Okinawa?<br />
+</dd>
+<dt>大学で経済を勉強する<mark>かい</mark>？</dt>
+<dd>En la universidad vas a estudiar economía?<br />
+</dd>
+<dt>便利かい？</dt>
+<dd>Is it convenient?<br />
+</dd>
+<dt>行くかい？</dt>
+<dd>Will you go?<br />
+</dd>
+<dt>高かったかい？</dt>
+<dd>Was it expensive?
+</dd>
+</dl>
+<h2 id="unlisted">Unlisted</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Particula</th>
+<th align="left">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ても</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">つつ</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ながら</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">し</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ば</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ぞ</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ばかし/ bakashi</td>
+<td align="left">Casual version of Bakari</td>
+</tr>
+<tr class="even">
+<td align="left">だらけ/ darake</td>
+<td align="left">Covered With, Filled With</td>
+</tr>
+<tr class="odd">
+<td align="left">どころか/dokoroka</td>
+<td align="left">Far From, Not Just</td>
+</tr>
+<tr class="even">
+<td align="left">ごろ/goro</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">かい/kai</td>
+<td align="left">Question Marker (Informal, Male)</td>
+</tr>
+<tr class="even">
+<td align="left">かな/ kana</td>
+<td align="left">I Wonder</td>
+</tr>
+<tr class="odd">
+<td align="left">けど/kedo</td>
+<td align="left">But, Although</td>
+</tr>
+<tr class="even">
+<td align="left">きり/kiri</td>
+<td align="left">Since, Only</td>
+</tr>
+<tr class="odd">
+<td align="left">までに/made ni</td>
+<td align="left">by the time, by</td>
+</tr>
+<tr class="even">
+<td align="left">め/me</td>
+<td align="left">-th, -nth</td>
+</tr>
+<tr class="odd">
+<td align="left">もの・もん mono/mon</td>
+<td align="left">mono de</td>
+</tr>
+<tr class="even">
+<td align="left">もので</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ものかmono ka</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ものならmono nara</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ものを mono wo</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">な・なぁ na/naa</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">なんかnanka</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">なら nara</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">にて nite</td>
+<td align="left">casual form of de</td>
+</tr>
+<tr class="even">
+<td align="left">には ni wa</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">のみno mi</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">yone</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">bakari ka</td>
+<td align="left">&quot;not only&quot;.</td>
+</tr>
+<tr class="even">
+<td align="left">de sae</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">sae...ba/ra</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">sura</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">to ka</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">tte</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">tteba</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ze</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">zutsu</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+	</div> <!-- contentbody -->
+	</div> <!-- content -->
+
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Particulas</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="duracion-actividad.html">&lt; previous</a></li><li><a href="index.html">index</a></li></ul>
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+	</div> <!-- wrapper -->
+</body>
+</html>

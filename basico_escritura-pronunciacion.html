@@ -1,0 +1,1008 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Escritura y pronunciación</title>
+  <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+    *           { margin: 0; padding: 0; }
+    html, body  { color: black; }
+
+    body {
+        padding: 0px 25px; 
+        margin: -1px auto;
+        font: 14px helvetica, "Segoe UI", arial, freesans, sans-serif; 
+        line-height: 1.8em;
+        color: #3A3A3A;
+        background-color: #f2f2f2;
+    }
+
+    p { margin: 1em 0; }
+
+    a {text-decoration: none; border-bottom: 1px dotted; color: #4183c4; }
+    a:hover, a:active { color: #75A837; }
+
+    blockquote {
+        margin: 14px 0; padding: 0.7em 11px;
+        color: #555;
+        font-style: italic;
+        border-left: 10px solid #838383;
+    }
+
+    img {
+        display:          block;
+        background-color: #F3F3F2;
+        border:           1px solid #D9D9D7;
+        margin:           0px auto;   padding: 5px;
+    }
+
+    ins { color:#008000; }
+    del { color:#ACACAC; }
+
+    hr { border: 0; height: 1px; background: #333; }
+
+    sup, sub, a.footnote-ref {
+        height:         0;
+        line-height:    1;
+        vertical-align: super;
+        position:       relative;
+    }
+
+    sub             {vertical-align: sub; top: -1px; }
+    a.footnote-ref { font-size: 1em; }
+
+    abbr { border-bottom: 1px dotted }
+
+    h1,h2,h3,h4,h5,h6 { margin: 1.5em 0px 1em; padding: 4px 0; border-bottom: 1px solid #e0e0e0; }
+    h1 { font-size: 2em;}
+    h2 { font-size: 1.571em; }
+    h3 { font-size: 1.429em; }
+    h4 { font-size: 1.286em; }
+    h5 { font-size: 1.143em; color: #4d4d4d;}
+    h6 { font-size: 1em; color: #666; }
+    h1.title { margin:0 }
+
+    ul, ol  { margin: 21px 0 0px 30px; list-style-position: outside; }
+    li      { margin: 7px 0 }
+    ul      { list-style-type: disc; }
+    ol      { list-style-type: decimal-leading-zero; }
+
+    dl, dt, dd { margin: 0; }
+    dl { padding: 0px 1em 10px; }
+    dt { padding: 5px 0 5px; font-weight: bold; line-height: normal; }
+    dd { padding: 0 10px 20px 3em; font-style: italic; }
+
+    /* based on http://icant.co.uk/csstablegallery/tables/50.php (Blaugrana). */
+    table { 
+        padding: 0; margin: 0 auto 2em auto;
+        border-spacing: 0; border-collapse: collapse;
+        min-width: 50%;
+        border: 1px solid;
+    }
+    th, caption {color: #444; font-weight: bold;text-align: center;}
+    td, th {padding: .6em .4em; vertical-align: top; border: 1px solid #779; }
+    th, tfoot td {border: 1px solid #361; background: #e0e5cf; }
+    /*tr { background:#f5f5f5 }*/
+    tr { background: #cfe0e5 }
+    tr.odd { background: #e5cfe0 }
+    tr.odd td, tr.odd th { border-color: #977; }
+
+    pre, code {
+        border:         1px solid #ccc;
+        font-size:      12px;
+        font-family:    Consolas, "Liberation Mono", Courier, monospace;
+        background-color:#eee;
+    }
+
+    pre  { margin: 5px 0 0; padding: 6px 5px; white-space: pre; overflow: auto; }
+    code { margin: 0 2px; padding: 2px 5px; /*white-space: nowrap;*/ }
+
+    pre code {border: none }
+
+    #TOC    { margin-top: 30px; background-color: #e5efdf; border: 1px solid #cedec4;}
+    #TOC a  { margin: 0 15px !important; }
+    #TOC ul {
+        margin: 1px 0 0 15px !important;    
+        padding: 0 0 0 1px !important;
+        display: block;
+        line-height: 20px;
+        list-style: none;
+    }
+    #TOC ul li  { border-left: 1px solid; position: relative; margin:0 !important; }
+    #TOC ul > #TOC li { padding-bottom: 10px !important;}
+    #TOC ul li:before {
+        content: '';
+        width: 14px;
+        position: absolute;
+        border-bottom: 1px solid;
+        left: 0px;
+        top: 10px;
+    }
+    #TOC ul li:last-child {border-left:none;}
+    #TOC ul li:last-child:before {border-left:1px solid; height: 10px; margin-top:-10px !important; }
+    #TOC ul li, #TOC ul li:before, #TOC ul li:last-child:before {border-color: #7A7A7A; }
+    .admonition p   { margin: 0.5em 1em 0.5em 1em; padding: 0;}
+    .admonition pre { margin: 0.4em 1em 0.4em 1em;}
+    .admonition ul, .admonition ol { margin: 0.1em 0.5em 0.5em 3em;   padding: 0;}
+
+    .admonition {
+        margin: 2em; padding: 0;
+        font-size:        0.9em;
+        border:           1px solid #c2c2c2;
+        background-color: #e9e9e9;
+    }
+
+    .admonition p.admonition-title {
+        margin:     0;
+        padding:    0.1em 0 0.1em 0.5em;
+        font-size:  1.1em;
+        font-weight: bold;
+        color:      #fff;
+        border-bottom: 1px solid #c2c2c2;
+        background-color: #999; 
+    }
+
+    .admonition.error, .admonition.caution, .admonition.danger
+    {border-color: #900000; background-color: #ffe9e9;}
+
+    .error p.admonition-title, .caution p.admonition-title, .danger p.admonition-title
+    {background-color: #b04040; border-color: #900000;}
+
+    .admonition.hint
+    {background-color: #ECFAE3;  border-color: #609060;}
+
+    .hint p.admonition-title
+    {background-color: #70A070; border-color: #609060;}
+
+    .admonition.note, .admonition.tip, .admonition.warning
+    {border-color:#e2ba54; background-color:#fcfce1;}
+
+    .note p.admonition-title, .tip p.admonition-title, .warning p.admonition-title
+    {background-color: #f1d170; border-color:#e2ba54;}
+
+    .admonition.info, .admonition.attention, .admonition.important
+    {background-color: #e8edfc; border-color: #94A7BF;}
+
+    .info p.admonition-title, .attention p.admonition-title, .important p.admonition-title
+    {background-color: #7088A0; border-color: #94A7BF;}
+
+    mark {background-color: #e7d600; padding: 0.2em;}
+
+    .bookbar {padding: 10px; border: 1px solid #ccc; border-width: 1px 0; overflow: auto}
+    .bookbar li {display: inline-block;}
+    .bookbar ul {margin: 0}
+    .breadcrumbs {float: left;}
+    .breadcrumbs li:after {content: "\0BB \020" /* » */; padding-left: 0.6em;}
+    .breadcrumbs li:last-child:after {content: ""}
+    .booknav {float:right;}
+    .booknav li {padding: 0 1.0em;}
+
+    #content {display: table-row;}
+
+    #sidebar {display: table-cell; width: 240px; font-size: small; background-color: #eeeeee;}
+    #sidebar ul ul {margin: 5px 0px 0px 5px;}
+    #sidebar ul ul li {margin-left: 10px;}
+    #sidebar ul {list-style: decimal;}
+    #sidebar ul ul {list-style: lower-alpha;}
+    #sidebar ul ul ul {list-style: lower-roman;}
+    #sidebar li.active > a {font-weight: bold}
+
+    #content-body {padding: 20px; font-size: 16px;}
+
+    #footer {padding: 10px; font-size: small; }
+</style></head><body>
+	<div id="wrapper">
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Escritura y pronunciación</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="index.html">index</a></li><li><a href="basico_pronombres.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="content">
+
+	<div id="sidebar">
+	<ul><li class='active'><a href="">Escritura y pronunciación</a><ul><li><a href="#silabarios">Silabarios</a><ul><li><a href="#hiragana">Hiragana</a></li><li><a href="#katakana">Katakana</a></li></ul></li><li><a href="#pronunciación">Pronunciación</a><ul><li><a href="#vocales-largas-y-cortas">Vocales largas y cortas</a></li><li><a href="#sonidos-dobles">Sonidos dobles</a></li></ul></li><li><a href="#cómo-superar-la-pobre-fonética">Cómo superar la pobre fonética</a><ul><li><a href="#transcripción-basada-en-la-pronunciación-original">Transcripción basada en la pronunciación original</a></li><li><a href="#transcripción-de-una-consonante-sola-si-no-existe">Transcripción de una consonante sola si no existe</a></li><li><a href="#representación-de-sonidos-largos">Representación de sonidos largos</a></li><li><a href="#representación-de-consonantes-dobles">Representación de consonantes dobles</a></li><li><a href="#transcripción-de-ti-tu-fa-fe-fi-fo-she-che-je-zi-di-y-du">Transcripción de ti, tu, fa, fe, fi, fo, she, che, je, zi, di y du</a></li></ul></li><li><a href="#kanji">Kanji</a><ul><li><a href="#orden-de-trazos">Orden de trazos</a></li></ul></li></ul></li><li><a href="basico_pronombres.html">Pronombres</a></li><li><a href="basico_numeros.html">Números</a></li><li><a href="basico_extra.html">Nociones básicas, extra</a></li><li><a href="tiempo.html">Tiempo</a></li><li><a href="colores.html">Colores</a></li><li><a href="greetings.html">Greetings</a></li><li><a href="desu.html">です</a></li><li><a href="sustantivos.html">Sustantivos</a></li><li><a href="kosoado.html">Ko-So-A-Do</a></li><li><a href="contadores.html">Contadores</a></li><li><a href="adjetivos.html">Adjetivos</a></li><li><a href="verbos.html">Verbos</a></li><li><a href="forma-simple.html">Usos de la forma simple</a></li><li><a href="aru-iru.html">ある, いる</a></li><li><a href="naru.html">なる</a></li><li><a href="adverbios.html">Adverbios</a></li><li><a href="descripcion_cosas.html">Describiendo donde estan las cosas</a></li><li><a href="expresar-cuanto.html">Expresar "¿Cuánto?"</a></li><li><a href="nanika-nanimo.html">何か, 何も</a></li><li><a href="expresar-cantidad.html">Expresión de cantidad</a></li><li><a href="duracion-actividad.html">Duración de actividad</a></li><li><a href="particulas.html">Particulas</a></li></ul>
+	</div>
+
+	<div id="content-body">
+
+<div id="header">
+<h1 class="title">Escritura y pronunciación</h1>
+</div>
+<p>Se puede escribir al estilo occidental (horizontalmente, de izquierda a derecha) y de manera tradicional (verticalmente de derecha a izquierda).</p>
+<p>Todos los materiales impresos se leen &quot;al revés&quot;: la portada seria nuestra contratapa, se leen de izquierda a derecha.</p>
+<p>Los signos de puntuación básicos son:</p>
+<ul>
+<li>punto: es un circulo (。)<br /></li>
+<li>coma: como la nuestra pero se escribe al revés (、)<br /></li>
+<li>comillas: como corchetes cortados (「 y 」)</li>
+</ul>
+<p>El japonés tiene tres sistemas de escritura: hiragana, katakana y kanji. Algunas veces se usa el rōmaji (alfabeto latino) para ciertas cosas puntuales, pero no es de gran uso. Tanto el hiragana, katakana y el kanji tienen orden de trazos.</p>
+<h2 id="silabarios">Silabarios</h2>
+<h3 id="hiragana">Hiragana</h3>
+<table>
+    <tr>
+        <td> </td><th colspan="5"> 
+Sonidos Puros
+</th><th colspan="5"> 
+Sonidos Impuros
+</th><th colspan="3"> 
+Diptongos
+</th>
+    </tr>
+    <tr>
+        <th> 
+<ul>
+<li></th><td> 
+あ a
+</td><td> 
+い i
+</td><td> 
+う u
+</td><td> 
+え e
+</td><td> 
+お o
+</td><td colspan="5"> </td><td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th rowspan="2"> 
+k
+</th><td rowspan="2"> 
+か ka
+</td><td rowspan="2"> 
+き ki
+</td><td rowspan="2"> 
+く ku
+</td><td rowspan="2"> 
+け ke
+</td><td rowspan="2"> 
+こ ko
+</td><td rowspan="2"> 
+が ga
+</td><td rowspan="2"> 
+ぎ gi
+</td><td rowspan="2"> 
+ぐ gu
+</td><td rowspan="2"> 
+げ ge
+</td><td rowspan="2"> 
+ご go
+</td><td> 
+きゃ kya
+</td><td> 
+きゅ kyu
+</td><td> 
+きょ kyo
+</td>
+    </tr>
+    <tr>
+        <td> 
+ぎゃ gya
+</td><td> 
+ぎゅ gyu
+</td><td> 
+ぎょ gyo
+</td>
+    </tr>
+    <tr>
+        <th rowspan="2"> 
+s
+</th><td rowspan="2"> 
+さ sa
+</td><td rowspan="2"> 
+し shi
+</td><td rowspan="2"> 
+す su
+</td><td rowspan="2"> 
+せ se
+</td><td rowspan="2"> 
+そ so
+</td><td rowspan="2"> 
+ざ za
+</td><td rowspan="2"> 
+じ ji
+</td><td rowspan="2"> 
+ず zu
+</td><td rowspan="2"> 
+ぜ ze
+</td><td rowspan="2"> 
+ぞ zo
+</td><td> 
+しゃ sha
+</td><td> 
+しゅ shu
+</td><td> 
+しょ sho
+</td>
+    </tr>
+    <tr>
+        <td> 
+じゃ ja
+</td><td> 
+じゅ ju
+</td><td> 
+じょ jo
+</td>
+    </tr>
+    <tr>
+        <th> 
+t
+</th><td> 
+た ta
+</td><td> 
+ち chi
+</td><td> 
+つ chu
+</td><td> 
+て te
+</td><td> 
+と to
+</td><td> 
+だ da
+</td><td> 
+ぢ ji
+</td><td> 
+づ zu
+</td><td> 
+で de
+</td><td> 
+ど do
+</td><td> 
+ちゃ cha
+</td><td> 
+ちゅ chu
+</td><td> 
+ちょ cho
+</td>
+    </tr>
+    <tr>
+        <th> 
+n
+</th><td> 
+な na
+</td><td> 
+に ni
+</td><td> 
+ぬ nu
+</td><td> 
+ね ne
+</td><td> 
+の no
+</td><td colspan="5">  </td><td> 
+にゃ nya
+</td><td> 
+にゅ nyu
+</td><td> 
+にょ nyo
+</td>
+    </tr>
+    <tr>
+        <th rowspan="3"> 
+h
+</th><td rowspan="3"> 
+は ha
+</td><td rowspan="3"> 
+ひ hi
+</td><td rowspan="3"> 
+ふ fu
+</td><td rowspan="3"> 
+へ he
+</td><td rowspan="3"> 
+ほ ho
+</td><td colspan="5"> </td><td> 
+ひゃ hya
+</td><td> 
+ひゅ hyu
+</td><td> 
+ひょ hyo
+</td>
+    </tr>
+    <tr>
+        <td> 
+ば ba
+</td><td> 
+び bi
+</td><td> 
+ぶ bu
+</td><td> 
+べ be
+</td><td> 
+ぼ bo
+</td><td> 
+びゃ bya
+</td><td> 
+びゅ byu
+</td><td> 
+びょ byo
+</td>
+    </tr>
+    <tr>
+        <td> 
+ぱ pa
+</td><td> 
+ぴ pi
+</td><td> 
+ぷ pu
+</td><td> 
+ぺ pe
+</td><td> 
+ぽ po
+</td><td> 
+ぴゃ pya
+</td><td> 
+ぴゅ pyu
+</td><td> 
+ぴょ pyo
+</td>
+    </tr>
+    <tr>
+        <th> 
+m
+</th><td> 
+ま ma
+</td><td> 
+み mi
+</td><td> 
+む mu
+</td><td> 
+め me
+</td><td> 
+も mo
+</td><td colspan="5">  </td><td> 
+みゃ mya
+</td><td> 
+みゅ myu
+</td><td> 
+みょ myo
+</td>
+    </tr>
+    <tr>
+        <th> 
+y
+</th><td> 
+や ya
+</td><td>  </td><td> 
+ゆ yu
+</td><td>  </td><td> 
+よ yo
+</td><td colspan="5">  </td><td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th> 
+r
+</th><td> 
+ら ra
+</td><td> 
+り ri
+</td><td> 
+る ru
+</td><td> 
+れ re
+</td><td> 
+ろ ro
+</td><td colspan="5">  </td><td> 
+りゃ rya
+</td><td> 
+りゅ ryu
+</td><td> 
+りょ ryo
+</td>
+    </tr>
+    <tr>
+        <th> 
+w
+</th><td> 
+わ wa
+</td><td colspan="3"> </td><td> 
+を (w)o
+</td><td colspan="5">  </td><td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th> 
+n
+</th><td colspan="5"> 
+ん n
+</td><td colspan="5">  </td><td colspan="3"> </td>
+    </tr>
+</table>
+</li>
+</ul>
+<p>Se puede ver que hay dos hiragana que se pronuncian &quot;ji&quot; y dos &quot;zu&quot;. Estos pares se pronuncian igual pero su uso es distinto. La amplia mayoría de veces se usa 「じ」 y 「ず」; los otros dos se usan contadas ocasiones.</p>
+<h3 id="katakana">Katakana</h3>
+<p>Usado usualmente para escribir palabras y nombres extranjeros, y para remarcar algo (serían como nuestras itálicas).</p>
+<table>
+    <tr>
+        <td> </td><th colspan="5"> 
+Sonidos Puros
+</th><th colspan="5"> 
+Sonidos Impuros
+</th><th colspan="3"> 
+Diptongos
+</th>
+    </tr>
+    <tr>
+        <th> 
+<ul>
+<li></th><td> 
+ア a
+</td><td> 
+イ i
+</td><td> 
+ウ u
+</td><td> 
+エ e
+</td><td> 
+オ o
+</td><td colspan="5"> </td><td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th rowspan="2"> 
+k
+</th><td rowspan="2"> 
+カ ka
+</td><td rowspan="2"> 
+キ ki
+</td><td rowspan="2"> 
+ク ku
+</td><td rowspan="2"> 
+ケ ke
+</td><td rowspan="2"> 
+コ ko
+</td><td rowspan="2"> 
+ガ ga
+</td><td rowspan="2"> 
+ギ gi
+</td><td rowspan="2"> 
+グ gu
+</td><td rowspan="2"> 
+ゲ ge
+</td><td rowspan="2"> 
+ゴ go
+</td><td> 
+キャ kya
+</td><td> 
+キュ kyu
+</td><td> 
+キョ kyo
+</td>
+    </tr>
+    <tr>
+        <td> 
+ギャ gya
+</td><td> 
+ギュ gyu
+</td><td> 
+ギョ gyo
+</td>
+    </tr>
+    <tr>
+        <th rowspan="2"> 
+s
+</th><td rowspan="2"> 
+サ sa
+</td><td rowspan="2"> 
+シ shi
+</td><td rowspan="2"> 
+ス su
+</td><td rowspan="2"> 
+セ se
+</td><td rowspan="2"> 
+ソ so
+</td><td rowspan="2"> 
+ザ za
+</td><td rowspan="2"> 
+ジ ji
+</td><td rowspan="2"> 
+ズ zu
+</td><td rowspan="2"> 
+ゼ ze
+</td><td rowspan="2"> 
+ゾ zo
+</td><td> 
+シャ sha
+</td><td> 
+シュ shu
+</td><td> 
+しょ ショ
+</td>
+    </tr>
+    <tr>
+        <td> 
+ジャ ja
+</td><td> 
+ジュ ju
+</td><td> 
+ジョ jo
+</td>
+    </tr>
+    <tr>
+        <th> 
+t
+</th><td> 
+タ ta
+</td><td> 
+チ chi
+</td><td> 
+ツ ｔhu
+</td><td> 
+テ te
+</td><td> 
+ト to
+</td><td> 
+ダ da
+</td><td> </td><td> </td><td> 
+デ de
+</td><td> 
+ド do
+</td><td> 
+チャ cha
+</td><td> 
+チュ chu
+</td><td> 
+チョ cho
+</td>
+    </tr>
+    <tr>
+        <th> 
+n
+</th><td> 
+ナ na
+</td><td> 
+ニ ni
+</td><td> 
+ヌ nu
+</td><td> 
+ネ ne
+</td><td> 
+ノ no
+</td><td colspan="5">  </td><td> 
+ニャ nya
+</td><td> 
+ニュ nyu
+</td><td> 
+ニョ nyo
+</td>
+    </tr>
+    <tr>
+        <th rowspan="3"> 
+h
+</th><td rowspan="3"> 
+ハ ha
+</td><td rowspan="3"> 
+ヒ hi
+</td><td rowspan="3"> 
+フ fu
+</td><td rowspan="3"> 
+ヘ he
+</td><td rowspan="3"> 
+ホ ho
+</td><td colspan="5"> </td><td> 
+ヒャ hya
+</td><td> 
+ヒュ hyu
+</td><td> 
+ヒョ hyo
+</td>
+    </tr>
+    <tr>
+        <td> 
+バ ba
+</td><td> 
+ビ bi
+</td><td> 
+ブ bu
+</td><td> 
+ベ be
+</td><td> 
+ボ bo
+</td><td> 
+ビャ bya
+</td><td> 
+ビュ byu
+</td><td> 
+ビョ byo
+</td>
+    </tr>
+    <tr>
+        <td> 
+パ pa
+</td><td> 
+ピ pi
+</td><td> 
+プ pu
+</td><td> 
+ペ pe
+</td><td> 
+ポ po
+</td><td> 
+ピャ pya
+</td><td> 
+ピュ pyu
+</td><td> 
+ピョ pyo
+</td>
+    </tr>
+    <tr>
+        <th> 
+m
+</th><td> 
+マ ma
+</td><td> 
+ミ mi
+</td><td> 
+ム mu
+</td><td> 
+メ me
+</td><td> 
+モ mo
+</td><td colspan="5">  </td><td> 
+ミャ mya
+</td><td> 
+ミュ myu
+</td><td> 
+ミョ myo
+</td>
+    </tr>
+    <tr>
+        <th> 
+y
+</th><td> 
+ヤ ya
+</td><td>  </td><td> 
+ユ yu
+</td><td>  </td><td> 
+ヨ yo
+</td><td colspan="5">  </td><td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th> 
+r
+</th><td> 
+ラ ra
+</td><td> 
+リ ri
+</td><td> 
+ル ru
+</td><td> 
+レ re
+</td><td> 
+ロ ro
+</td><td colspan="5">  </td><td> 
+リャ rya
+</td><td> 
+リュ ryu
+</td><td> 
+リョ ryo
+</td>
+    </tr>
+    <tr>
+        <th> 
+w
+</th><td> 
+ワ wa
+</td><td colspan="3"> </td><td> 
+ヲ (w)o
+</td><td colspan="5">  </td><td colspan="3"> </td>
+    </tr>
+    <tr>
+        <th> 
+n
+</th><td colspan="5"> 
+ン n
+</td><td colspan="5">  </td><td colspan="3"> </td>
+    </tr>
+</table>
+</li>
+</ul>
+<table>
+    <tr>
+        <th rowspan="2"> 
+Especiales
+</th><td> 
+ヴァ va
+</td><td> 
+ヴィ vi
+</td><td> 
+ヴ vu
+</td><td> 
+ヴェ ve
+</td><td> 
+ヴォ vo
+</td><td> 
+ドウ du
+</td><td> 
+チイ ti
+</td>
+    </tr>
+    <tr>
+        <td> 
+ファ fa
+</td><td> 
+フィ fi
+</td><td> 
+フェ fe
+</td><td> 
+フォ fo
+</td><td> 
+シェ she
+</td><td> 
+ジェ je
+</td><td> 
+チェ che
+</td>
+    </tr>
+</table>
+
+
+<h2 id="pronunciación">Pronunciación</h2>
+<p>Todas suenan como en español, excepto:</p>
+<ul>
+<li>La &quot;r&quot; se pronuncia suave, como en &quot;cara&quot;. Nunca como &quot;ratón&quot; o &quot;terremoto&quot;.<br /></li>
+<li>La &quot;sh&quot; como &quot;Shanon&quot; pero un poco más suave.<br /></li>
+<li>La &quot;j&quot; como la &quot;j&quot; en inglés (como &quot;Jason&quot;) o para los argentinos como la &quot;ll&quot;.<br /></li>
+<li>La &quot;z&quot; como en la &quot;z&quot; en inglés: &quot;Zelda&quot;, &quot;zero&quot;, &quot;zone&quot;.<br /></li>
+<li>La &quot;h&quot; también como en inglés (un poco aspirada) como en &quot;Harry&quot; o &quot;hockey&quot;.<br /></li>
+<li>ふ es &quot;mezcla&quot; entre fu y hu.<br /></li>
+<li>Las &quot;g&quot; (ge, gi, etc) se pronuncian suave, como gue y gui.</li>
+</ul>
+<p>La 「ん」 cambia de pronunciación dependiendo de qué sonido &quot;inicial&quot; es seguida:</p>
+<ul>
+<li>Seguida por n, t, d, s, z: se pronuncia &quot;n&quot; (ejemplo: サンタ = santa)<br /></li>
+<li>Seguida por m, p, b: se pronuncia &quot;m&quot; (ejemplo: ぶんぽう = bumpou)</li>
+</ul>
+<p>La &quot;i&quot; y &quot;u&quot; algunas veces se &quot;eliminan&quot; cuando estan entre consonantes (k, s, t, p y h) o al final de la oración precedida de consonates sin voz: suki desu = s(u)ki des(u)</p>
+<p>El japonés tiene acento tónico: las sílabas pronunciadas pueden ser altas o bajas.</p>
+<h3 id="vocales-largas-y-cortas">Vocales largas y cortas</h3>
+<p>Las vocales largas son vocales que se pronuncian durante un poco más de tiempo sutilmente. Ejemplo: くうそ &quot;kūso&quot; (vano, insustancial) y くそ &quot;kuso&quot; (mierda).</p>
+<p>Para indicar el alargamiento de la vocal se usa:</p>
+<ul>
+<li>en hiragana, una 「う」 detrás de &quot;o&quot; y &quot;u&quot; (くうそ &quot;kuuso&quot;, がっこう &quot;gakkoo&quot;).<br /></li>
+<li>en katakana, un guión largo: ニューヨーク New York/Nueva York.</li>
+</ul>
+<h3 id="sonidos-dobles">Sonidos dobles</h3>
+<p>Los sonidos dobles son consonantes que suenan durante un poco más de tiempo que las normales y más bruscamente. Se indica con el carácter っ/ッ chiquito delante de la consonante que se dobla. Sólo se doblan los hiragana que empiezan por k, s, t, ch, g, z, d, b y p. Ejemplos:</p>
+<ul>
+<li>しゅっぱつ (salida, partida)<br /></li>
+<li>きっさてん (cafetería)<br /></li>
+<li>ラケット (en. raquet)<br /></li>
+<li>マッサージ (en. massage)<br /></li>
+<li>まっちゃ matcha (té verde)</li>
+</ul>
+<h2 id="cómo-superar-la-pobre-fonética">Cómo superar la pobre fonética</h2>
+<p>Al tener un sistema silbatico no existen las consonantes aisladas. Una consonante siempre va seguida de una vocal y no existen las combinaciones ti, tu, fa, fe, fi, fo, she, che, je, zi, di y du. Hay diferentes de transcribir las palabras extranjeras:</p>
+<h3 id="transcripción-basada-en-la-pronunciación-original">Transcripción basada en la pronunciación original</h3>
+<p>コンピューター proviene de <em>computer</em>, al venir del inglés se transcribe según la pronunciación inglesa. オランダ proviene de Holanda, al venir del portugués transcribe según la pronunciación portuguesa.</p>
+<h3 id="transcripción-de-una-consonante-sola-si-no-existe">Transcripción de una consonante sola si no existe</h3>
+<p>Se tiene que elegir de la columna de la tabla del katakana que se parezca más a la pronunciación original y elegir el carácter que tenga el valor de la consonante + u (porque se pronuncia muy débilmente, casi pasa desapercibida), excepto en t&quot;, y &quot;d&quot; que se le pone una &quot;o&quot;.</p>
+<ul>
+<li>(en) Crack = クラック<br /></li>
+<li>(en) Service = サービス</li>
+</ul>
+<p>Como las combinaciones tu y du no existen (en su lugar se encuentran los sonidos ツ y ズ) se usan los katakanas de チ y ト para transcribir el sonido de la t.</p>
+<ul>
+<li>Hint = ヒント<br /></li>
+<li>Bed = ベッド</li>
+</ul>
+<h3 id="representación-de-sonidos-largos">Representación de sonidos largos</h3>
+<p>El guion representa que la vocal que hay antes se pronuncia un poco más de tiempo.</p>
+<ul>
+<li>Volleyball = バレーボール<br /></li>
+<li>Curry = カレー<br /></li>
+<li>(en) Driver = ドライバー<br /></li>
+<li>(en) Heater = ヒーター</li>
+</ul>
+<h4 id="la-l-j-g-ñ-x-ks-y-v">La L, J, G, Ñ, X (&quot;ks&quot;) y V</h4>
+<p>Se sustituyen por sonidos que más se parezcan a la pronunciación original: La L se sustituye por la R, la J y G (de &quot;gente&quot;, no de &quot;guerra&quot;) se suelen sustituir por los katakanas de la columna H (al pronunciarse algo aspirada, parecido a la J y G).</p>
+<p>Ejemplos L:</p>
+<ul>
+<li>(en) ball = ボール<br /></li>
+<li>(en) lens = レンズ</li>
+</ul>
+<p>Ejemplos Ñ:</p>
+<ul>
+<li>Cataluña = カタルーニャ<br /></li>
+<li>Plaza España = エスパーニャ広場<br /></li>
+<li>lasaña (Lasagna) = ラザーニャ<br /></li>
+<li>ñoqui (Gnocchi) = ニョッキ</li>
+</ul>
+<p>Ejemplos J:</p>
+<ul>
+<li>José = ホセ<br /></li>
+<li>Gema = ヘマ<br /></li>
+<li>Juan = フアン</li>
+</ul>
+<p>Ejemplos X (&quot;ks&quot;): siempre se usa el doble クス</p>
+<ul>
+<li>fax = ファックス<br /></li>
+<li>box = ボックス</li>
+</ul>
+<p>Ejemplos V: ヴァ (va), ヴェ (ve), ヴィ (vi), ヴ (vo), ヴ (vu).</p>
+<ul>
+<li>(en) violín = ヴァイオリン<br /></li>
+<li>evangelion = エヴァンゲリオン<br /></li>
+<li>Verónica = ヴェロニカ</li>
+</ul>
+<h3 id="representación-de-consonantes-dobles">Representación de consonantes dobles</h3>
+<p>La consonante doble es cuando una palabra tiene una consonante que se pronuncia más bruscamente que de costumbre. Para representarlo se usa el carácter ツ delante de la consonante que se dobla.</p>
+<ul>
+<li>(en) Carpet = カーペット<br /></li>
+<li>(en) Slipper = スリッパ<br /></li>
+<li>(en) Pocket = ポケット</li>
+</ul>
+<h3 id="transcripción-de-ti-tu-fa-fe-fi-fo-she-che-je-zi-di-y-du">Transcripción de ti, tu, fa, fe, fi, fo, she, che, je, zi, di y du</h3>
+<p>La estrategia más normal es utilizar un carácter katakana más una vocal escrita más pequeña al lado.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Sonidos con f: El único carácter con pronunciación es 「フ」, para transcribir las demás silabas se usa el katakana fu + la vocal correspondiente más pequeña al lado.</p>
+<ul>
+<li>(en) fan (ventilador) = ファン<br /></li>
+<li>(en) font = フォント</li>
+</ul></li>
+<li><p>She, che y je: Para &quot;she&quot; se usa 「シェ」 (shi + e), para &quot;che&quot; se usa 「チェ」 (chi + e) y para &quot;je&quot; se usa 「ジェ」 (ji + e).</p>
+<ul>
+<li>(en) chess = チェス<br /></li>
+<li>jet = ジェット</li>
+</ul></li>
+<li><p>Ti, di: Se transcribe ティ　te, ディ de</p>
+<ul>
+<li>spaghetti = スパゲッティ<br /></li>
+<li>disk = ディスク</li>
+</ul></li>
+<li><p>Tu, du: Se pueden transcribir de varias maneras pero la más usual es transcribir ツ (tu). A veces se puede encontrar como トゥ.</p>
+<ul>
+<li>Tour = ツアー<br /></li>
+<li>Mañana = トゥモロー</li>
+</ul></li>
+</ol>
+<h2 id="kanji">Kanji</h2>
+<p>En japonés, los sustantivos y raíces de adjetivos y verbos son casi siempre escritos en kanji. Los adverbios frequentemente son también escritos de esta forma.</p>
+<p>Casi todos los kanji tienen dos tipos de pronunciaciones: 音読み（おんよみ, lectura derivada del chino）　y 訓読み（くんよみ, lectura original japonesa）.</p>
+<p>No se puede saber exactamente la pronunciación del kanji. Lo que funciona muchas veces es la siguiente &quot;regla&quot;: si un caracter va solo, se suele leer en 訓読み. Si va acompañados de otros, se suele leer en 音読み.</p>
+<p>Ejemplo:</p>
+<dl>
+<dt>その<mark>新</mark>しい<mark>新聞</mark>はおもしろいです。</dt>
+<dd>Ese diario/periódico nuevo es interesante.
+</dd>
+</dl>
+<p>El caracter 新 aparece dos veces pero pronunciado de distinta manera. La primer vez se lee con 訓読み (あたら), y la segunda con 音読み (しん, 新聞 = しんぶん).</p>
+<h3 id="orden-de-trazos">Orden de trazos</h3>
+<p>Las normas basicas para escribir un kanji.</p>
+<ul>
+<li>De arriba a abajo<br /></li>
+<li>De izquierda a derecha<br /></li>
+<li>Primero los trazos horizontales<br /></li>
+<li>Primero se escribe el centro<br /></li>
+<li>Primero se escribe la parte de afuera<br /></li>
+<li>Trazos inclinados a la izquierda se escriben antes de los que se inclinan a la derecha<br /></li>
+<li>Se escribe a lo ultimo el trazo que parte al kanji de arriba abajo<br /></li>
+<li>Se escribe a lo ultimo el trazo que parte al kanji de izquierda a derecha</li>
+</ul>
+<p>Como siempre, hay caracteres que son excepciones a esta regla.</p>
+
+	</div> <!-- contentbody -->
+	</div> <!-- content -->
+
+	
+	<div class="bookbar">
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Japonés Wiki</a></li>
+			<li class="active">Escritura y pronunciación</li>
+		</ul>
+
+		<ul class="booknav"><li><a href="index.html">index</a></li><li><a href="basico_pronombres.html">next &gt;</a></li></ul>
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+	</div> <!-- wrapper -->
+</body>
+</html>
